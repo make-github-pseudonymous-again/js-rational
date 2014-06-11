@@ -7,3 +7,4 @@ natural numbers algorithm templates for JavaScript
 [![Coverage Status](https://coveralls.io/repos/aureooms/real/badge.png)](https://coveralls.io/r/aureooms/real)
 [![Dependencies Status](https://david-dm.org/aureooms/real.png)](https://david-dm.org/aureooms/real#info=dependencies)
 [![devDependencies Status](https://david-dm.org/aureooms/real/dev-status.png)](https://david-dm.org/aureooms/real#info=devDependencies)
+[![Code Climate](https://codeclimate.com/github/aureooms/real.png)](https://codeclimate.com/github/aureooms/real)
