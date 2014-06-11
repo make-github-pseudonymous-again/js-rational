@@ -1,0 +1,7 @@
+{
+  "name": "real",
+  "version": "0.0.0",
+  "description" : "real numbers algorithm templates for JavaScript",
+  "homepage": "https://github.com/aureooms/real",
+  "license": "GPL v2"
+}

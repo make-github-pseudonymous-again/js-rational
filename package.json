@@ -1,0 +1,45 @@
+{
+  "name": "real",
+  "version": "0.0.0",
+  "description": "natural numbers algorithm templates for JavaScript",
+  "main": "js/dist/real.js",
+  "dependencies": {},
+  "devDependencies": {
+    "qunit": "git://github.com/gotwarlost/node-qunit.git#istanbul-coverage",
+    "coveralls": "^2.10.0",
+    "optimist": "^0.6.1",
+    "algo": "^0.1.1",
+    "uglify-js": "^2.4.13",
+    "recquire": "^0.1.0",
+    "recbuild": "^0.0.3",
+    "codeclimate-test-reporter": "0.0.3"
+  },
+  "scripts": {
+    "build": "node js/build.js",
+    "test": "npm run patch-qunit && node test/js/run.js",
+    "patch-qunit": "export DIR=node_modules/qunit/support/qunit/qunit && mkdir -p $DIR && cp support/qunit.js $DIR/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://aureooms@github.com/aureooms/real.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "algorithm",
+    "template",
+    "complexity",
+    "real",
+    "arithmetic",
+    "bigdec",
+    "bigdecimal",
+    "fractions",
+    "numbers"
+  ],
+  "author": "Ooms Aurélien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)",
+  "license": "GPL v2",
+  "bugs": {
+    "url": "https://github.com/aureooms/real/issues"
+  },
+  "homepage": "https://github.com/aureooms/real"
+}
