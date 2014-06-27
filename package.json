@@ -1,7 +1,7 @@
 {
   "name": "real",
-  "version": "0.0.1",
-  "description": "natural numbers algorithm templates for JavaScript",
+  "version": "0.0.2",
+  "description": "rational numbers algorithm templates for JavaScript",
   "main": "js/dist/real.js",
   "dependencies": {},
   "devDependencies": {
@@ -35,7 +35,9 @@
     "bigdec",
     "bigdecimal",
     "fractions",
-    "numbers"
+    "rational",
+    "numbers",
+    "exact"
   ],
   "author": "Ooms Aurélien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)",
   "license": "GPL v2",
