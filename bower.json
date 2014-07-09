@@ -1,7 +1,7 @@
 {
-	"version": "0.0.2",
-	"homepage": "https://github.com/aureooms/real",
-	"description": "real numbers algorithm templates for JavaScript",
-	"license": "GPL v2",
-	"name": "real"
+  "name": "real",
+  "version": "0.0.3",
+  "description" : "rational numbers algorithm templates for JavaScript",
+  "homepage": "https://github.com/aureooms/real",
+  "license": "GPL v2"
 }

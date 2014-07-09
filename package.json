@@ -1,46 +1,48 @@
 {
-	"devDependencies": {
-		"int": "^0.1.1",
-		"recbuild": "^0.0.3",
-		"uglify-js": "^2.4.13",
-		"coveralls": "^2.10.0",
-		"recquire": "^0.1.0",
-		"algo": "^0.1.1",
-		"qunit": "^0.6.3",
-		"istanbul": "^0.2.11",
-		"codeclimate-test-reporter": "0.0.3",
-		"optimist": "^0.6.1"
-	},
-	"dependencies": {},
-	"version": "0.0.2",
-	"keywords": [
-		"js",
-		"javascript",
-		"algorithm",
-		"template",
-		"complexity",
-		"real",
-		"arithmetic",
-		"bigdec",
-		"bigdecimal",
-		"fractions",
-		"numbers"
-	],
-	"description": "natural numbers algorithm templates for JavaScript",
-	"scripts": {
-		"test": "node test/js/run.js",
-		"build": "node js/build.js"
-	},
-	"name": "real",
-	"author": "Ooms Aur\u00e9lien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)",
-	"repository": {
-		"url": "https://aureooms@github.com/aureooms/real.git",
-		"type": "git"
-	},
-	"bugs": {
-		"url": "https://github.com/aureooms/real/issues"
-	},
-	"main": "js/dist/real.js",
-	"homepage": "https://github.com/aureooms/real",
-	"license": "GPL v2"
+  "name": "real",
+  "version": "0.0.3",
+  "description": "rational numbers algorithm templates for JavaScript",
+  "main": "js/dist/real.js",
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.10.0",
+    "optimist": "^0.6.1",
+    "algo": "^0.1.1",
+    "uglify-js": "^2.4.13",
+    "recquire": "^0.1.0",
+    "recbuild": "^0.0.3",
+    "codeclimate-test-reporter": "0.0.3",
+    "qunit": "^0.6.3",
+    "istanbul": "^0.2.11",
+    "int": "^0.1.1"
+  },
+  "scripts": {
+    "build": "node js/build.js",
+    "test": "node test/js/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://aureooms@github.com/aureooms/real.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "algorithm",
+    "template",
+    "complexity",
+    "real",
+    "arithmetic",
+    "bigdec",
+    "bigdecimal",
+    "fractions",
+    "rational",
+    "numbers",
+    "exact"
+  ],
+  "author": "Ooms Aurélien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)",
+  "license": "GPL v2",
+  "bugs": {
+    "url": "https://github.com/aureooms/real/issues"
+  },
+  "homepage": "https://github.com/aureooms/real"
 }
