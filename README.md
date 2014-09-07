@@ -1,10 +1,10 @@
-[real](http://aureooms.github.io/real)
+[js-rational](http://aureooms.github.io/js-rational)
 ===
 
-rational numbers algorithm templates for JavaScript
+rational numbers code bricks for JavaScript
 
-[![Build Status](https://drone.io/github.com/aureooms/real/status.png)](https://drone.io/github.com/aureooms/real/latest)
-[![Coverage Status](https://coveralls.io/repos/aureooms/real/badge.png)](https://coveralls.io/r/aureooms/real)
-[![Dependencies Status](https://david-dm.org/aureooms/real.png)](https://david-dm.org/aureooms/real#info=dependencies)
-[![devDependencies Status](https://david-dm.org/aureooms/real/dev-status.png)](https://david-dm.org/aureooms/real#info=devDependencies)
-[![Code Climate](https://codeclimate.com/github/aureooms/real.png)](https://codeclimate.com/github/aureooms/real)
+[![Build Status](https://travis-ci.org/aureooms/js-rational.svg)](https://travis-ci.org/aureooms/js-rational)
+[![Coverage Status](https://coveralls.io/repos/aureooms/js-rational/badge.png)](https://coveralls.io/r/aureooms/js-rational)
+[![Dependencies Status](https://david-dm.org/aureooms/js-rational.png)](https://david-dm.org/aureooms/js-rational#info=dependencies)
+[![devDependencies Status](https://david-dm.org/aureooms/js-rational/dev-status.png)](https://david-dm.org/aureooms/js-rational#info=devDependencies)
+[![Code Climate](https://codeclimate.com/github/aureooms/js-rational.png)](https://codeclimate.com/github/aureooms/js-rational)
