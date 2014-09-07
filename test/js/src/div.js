@@ -6,11 +6,11 @@ var fmt = util.format;
 
 
 
-var check = function(ALG, alg, Real, alu, traits){
+var check = function(ALG, alg, Rational, alu, traits){
 
-	var name = fmt('div<%s, %s, %s>', alg, Real.name, alu.name);
+	var name = fmt('div<%s, %s, %s>', alg, Rational.name, alu.name);
 
-	var div = ALG[alg](Real, alu);
+	var div = ALG[alg](Rational, alu);
 
 	var one = function(a, b, c, d, e){
 
@@ -19,8 +19,8 @@ var check = function(ALG, alg, Real, alu, traits){
 		c = alu.reg(c);
 		d = alu.reg(d);
 
-		x = new Real(a, b);
-		y = new Real(c, d);
+		x = new Rational(a, b);
+		y = new Rational(c, d);
 
 		z = div(x, y);
 
@@ -43,7 +43,7 @@ var check = function(ALG, alg, Real, alu, traits){
 
 // params
 
-var ALG = { 'real.div_t' : real.div_t };
+var ALG = { 'rational.div_t' : rational.div_t };
 
 var REAL = [Array];
 

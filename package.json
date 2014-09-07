@@ -1,36 +1,29 @@
 {
+	"name": "aureooms-js-rational",
+	"description": "rational numbers code bricks for JavaScript",
 	"bugs": {
-		"url": "https://github.com/aureooms/real/issues"
+		"url": "https://github.com/aureooms/js-rational/issues"
 	},
 	"dependencies": {},
-	"name": "real",
-	"author": "Ooms Aur\u00e9lien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)",
+	"author": "aureooms",
 	"scripts": {
-		"test": "node test/js/run.js",
-		"build": "node js/build.js"
+		"build": "./node_modules/.bin/aureooms-node-package-build",
+		"test": "./node_modules/.bin/aureooms-node-package-test",
+		"doc": "./node_modules/.bin/groc"
 	},
-	"homepage": "https://github.com/aureooms/real",
+	"homepage": "https://github.com/aureooms/js-rational",
 	"devDependencies": {
-		"int": "^0.1.1",
-		"qunit": "^0.6.3",
-		"optimist": "^0.6.1",
-		"recbuild": "^0.0.3",
-		"algo": "^0.1.1",
-		"coveralls": "^2.10.0",
-		"uglify-js": "^2.4.13",
-		"codeclimate-test-reporter": "0.0.3",
-		"recquire": "^0.1.0",
-		"istanbul": "^0.2.11"
+		"aureooms-node-package": "^1.0.0",
+		"aureooms-js-algo": "^0.2.0",
+		"int": "^0.1.1"
 	},
-	"main": "js/dist/real.js",
-	"description": "rational numbers algorithm templates for JavaScript",
+	"main": "js/dist/rational.js",
 	"keywords": [
 		"js",
 		"javascript",
 		"algorithm",
 		"template",
 		"complexity",
-		"real",
 		"arithmetic",
 		"bigdec",
 		"bigdecimal",
@@ -39,10 +32,10 @@
 		"numbers",
 		"exact"
 	],
-	"license": "GPL v2",
+	"license": "AGPL-3.0",
 	"repository": {
 		"type": "git",
-		"url": "https://aureooms@github.com/aureooms/real.git"
+		"url": "https://github.com/aureooms/js-rational.git"
 	},
 	"version": "0.0.4"
 }

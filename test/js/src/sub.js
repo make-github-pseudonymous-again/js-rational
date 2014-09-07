@@ -6,11 +6,11 @@ var fmt = util.format;
 
 
 
-var check = function(ALG, alg, Real, alu, traits){
+var check = function(ALG, alg, Rational, alu, traits){
 
-	var name = fmt('sub<%s, %s, %s>', alg, Real.name, alu.name);
+	var name = fmt('sub<%s, %s, %s>', alg, Rational.name, alu.name);
 
-	var sub = ALG[alg](Real, alu);
+	var sub = ALG[alg](Rational, alu);
 
 	var one = function(a, b, c, d, e){
 
@@ -19,8 +19,8 @@ var check = function(ALG, alg, Real, alu, traits){
 		c = alu.reg(c);
 		d = alu.reg(d);
 
-		x = new Real(a, b);
-		y = new Real(c, d);
+		x = new Rational(a, b);
+		y = new Rational(c, d);
 
 		z = sub(x, y);
 
@@ -43,7 +43,7 @@ var check = function(ALG, alg, Real, alu, traits){
 
 // params
 
-var ALG = { 'real.sub_t' : real.sub_t };
+var ALG = { 'rational.sub_t' : rational.sub_t };
 
 var REAL = [Array];
 

@@ -1,10 +1,10 @@
-(function(exports){
+(function(exports, undefined){
 
 	'use strict';
 
 
-/* /home/genius/dev/real/js/src/add */
-/* /home/genius/dev/real/js/src/add/add.js */
+/* js/src/add */
+/* js/src/add/add.js */
 
 
 /**
@@ -30,8 +30,8 @@ var add_t = function(Real, alu){
 
 exports.add_t = add_t;
 
-/* /home/genius/dev/real/js/src/div */
-/* /home/genius/dev/real/js/src/div/div.js */
+/* js/src/div */
+/* js/src/div/div.js */
 
 /**
  * Dummy div template.
@@ -54,8 +54,8 @@ var div_t = function(Real, alu){
 
 exports.div_t = div_t;
 
-/* /home/genius/dev/real/js/src/mul */
-/* /home/genius/dev/real/js/src/mul/mul.js */
+/* js/src/mul */
+/* js/src/mul/mul.js */
 
 /**
  * Dummy mul template.
@@ -78,8 +78,8 @@ var mul_t = function(Real, alu){
 
 exports.mul_t = mul_t;
 
-/* /home/genius/dev/real/js/src/sub */
-/* /home/genius/dev/real/js/src/sub/sub.js */
+/* js/src/sub */
+/* js/src/sub/sub.js */
 
 /**
  * Dummy sub template.
@@ -104,4 +104,4 @@ var sub_t = function(Real, alu){
 
 exports.sub_t = sub_t;
 
-})(typeof exports === 'undefined' ? this['real'] = {} : exports);
+})(typeof exports === 'undefined' ? this['rational'] = {} : exports);

@@ -1,7 +1,19 @@
 {
-	"license": "GPL v2",
-	"homepage": "https://github.com/aureooms/real",
+	"license": "AGPL-3.0",
+	"homepage": "https://aureooms.github.io/js-rational",
 	"version": "0.0.4",
-	"name": "real",
-	"description": "rational numbers algorithm templates for JavaScript"
+	"name": "aureooms-js-rational",
+	"description": "rational numbers code bricks for JavaScript",
+	"main": "js/dist/rational.js",
+	"ignore": [
+		"js/index.js",
+		"js/src",
+		"test",
+		"pkg.json",
+		"package.json",
+		".groc.json",
+		".travis.yml",
+		".gitignore",
+		"README.md"
+	]
 }
