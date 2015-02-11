@@ -1,0 +1,11 @@
+{
+	"description": "rational numbers code bricks for JavaScript",
+	"version": "0.1.0",
+	"repo": "aureooms/js-rational",
+	"scripts": [
+		"js/dist/rational.js"
+	],
+	"name": "aureooms-js-rational",
+	"license": "AGPL-3.0",
+	"main": "js/dist/rational.js"
+}
