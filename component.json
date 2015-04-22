@@ -1,6 +1,6 @@
 {
 	"description": "rational numbers code bricks for JavaScript",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"repo": "aureooms/js-rational",
 	"scripts": [
 		"js/dist/rational.js"
