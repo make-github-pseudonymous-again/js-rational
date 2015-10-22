@@ -1,4 +1,4 @@
-	
+
 
 var int = require('int');
 var util = require('util');
@@ -6,23 +6,20 @@ var fmt = util.format;
 
 
 
-var check = function(ALG, alg, Rational, alu, traits){
+var check = function(ALG, alg, alu, traits){
 
-	var name = fmt('div<%s, %s, %s>', alg, Rational.name, alu.name);
+	var name = fmt('div<%s, %s>', alg, alu.name);
 
-	var div = ALG[alg](Rational, alu);
+	var div = ALG[alg]( alu.mul );
 
 	var one = function(a, b, c, d, e){
 
-		a = alu.reg(a);
-		b = alu.reg(b);
-		c = alu.reg(c);
-		d = alu.reg(d);
+		var a0 = alu.reg(a);
+		var a1 = alu.reg(b);
+		var b0 = alu.reg(c);
+		var b1 = alu.reg(d);
 
-		x = new Rational(a, b);
-		y = new Rational(c, d);
-
-		z = div(x, y);
+		var z = div( a0 , a1 , b0 , b1 ) ;
 
 		deepEqual(traits.num(z), e, 'should be ' + e);
 	};
@@ -43,9 +40,7 @@ var check = function(ALG, alg, Rational, alu, traits){
 
 // params
 
-var ALG = { 'rational.div_t' : rational.div_t };
-
-var REAL = [Array];
+var ALG = { 'rational._div' : rational._div };
 
 var ALU = [{
 	name : 'node-int based alu',
@@ -64,6 +59,5 @@ var TRAITS = [{
 
 
 for (var alg in ALG)
-for (var j = 0; j < REAL.length; ++j)
 for (var k = 0; k < ALU.length; ++k)
-	check(ALG, alg, REAL[j], ALU[k], TRAITS[k]);
+	check(ALG, alg, ALU[k], TRAITS[k]);

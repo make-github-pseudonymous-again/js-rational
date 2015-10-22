@@ -1,107 +1,100 @@
-(function(exports, undefined){
+"use strict";
+
+(function () {
 
 	'use strict';
 
+	var definition = function definition(exports, undefined) {
 
-/* js/src/add */
-/* js/src/add/add.js */
+		/* js/src/add.js */
 
+		/**
+   * Dummy add template.
+   */
 
-/**
- * Dummy add template.
- */
+		var _add = function _add(mul, add) {
 
-var add_t = function(Real, alu){
+			return function (a0, a1, b0, b1) {
 
+				var d = mul(a1, b1);
+				var x = mul(a0, b1);
+				var y = mul(b0, a1);
+				var n = add(x, y);
 
-	var add = function(a, b){
-		var d = alu.mul(a[1], b[1]);
-		var x = alu.mul(a[0], b[1]);
-		var y = alu.mul(b[0], a[1]);
-		var n = alu.add(x, y);
+				return [n, d];
+			};
+		};
 
-		return new Real(n, d);
+		exports._add = _add;
+
+		/* js/src/div.js */
+
+		/**
+   * Dummy div template.
+   */
+
+		var _div = function _div(mul) {
+
+			return function (a0, a1, b0, b1) {
+
+				var d = mul(a1, b0);
+				var n = mul(a0, b1);
+
+				return [n, d];
+			};
+		};
+
+		exports._div = _div;
+
+		/* js/src/mul.js */
+
+		/**
+   * Dummy mul template.
+   */
+
+		var _mul = function _mul(mul) {
+
+			return function (a0, a1, b0, b1) {
+
+				var d = mul(a1, b1);
+				var n = mul(a0, b0);
+
+				return [n, d];
+			};
+		};
+
+		exports._mul = _mul;
+
+		/* js/src/sub.js */
+
+		/**
+   * Dummy sub template.
+   */
+
+		var _sub = function _sub(mul, sub) {
+
+			return function (a0, a1, b0, b1) {
+
+				var d = mul(a1, b1);
+				var x = mul(a0, b1);
+				var y = mul(b0, a1);
+				var n = sub(x, y);
+
+				return [n, d];
+			};
+		};
+
+		exports._sub = _sub;
+
+		return exports;
 	};
-
-	return add;
-
-};
-
-
-exports.add_t = add_t;
-
-/* js/src/div */
-/* js/src/div/div.js */
-
-/**
- * Dummy div template.
- */
-
-var div_t = function(Real, alu){
-
-
-	var div = function(a, b){
-		var d = alu.mul(a[1], b[0]);
-		var n = alu.mul(a[0], b[1]);
-
-		return new Real(n, d);
-	};
-
-	return div;
-
-};
-
-
-exports.div_t = div_t;
-
-/* js/src/mul */
-/* js/src/mul/mul.js */
-
-/**
- * Dummy mul template.
- */
-
-var mul_t = function(Real, alu){
-
-
-	var mul = function(a, b){
-		var d = alu.mul(a[1], b[1]);
-		var n = alu.mul(a[0], b[0]);
-
-		return new Real(n, d);
-	};
-
-	return mul;
-
-};
-
-
-exports.mul_t = mul_t;
-
-/* js/src/sub */
-/* js/src/sub/sub.js */
-
-/**
- * Dummy sub template.
- */
-
-var sub_t = function(Real, alu){
-
-
-	var sub = function(a, b){
-		var d = alu.mul(a[1], b[1]);
-		var x = alu.mul(a[0], b[1]);
-		var y = alu.mul(b[0], a[1]);
-		var n = alu.sub(x, y);
-
-		return new Real(n, d);
-	};
-
-	return sub;
-
-};
-
-
-exports.sub_t = sub_t;
-
-})(typeof exports === 'undefined' ? this['rational'] = {} : exports);
+	if (typeof exports === "object") {
+		definition(exports);
+	} else if (typeof define === "function" && define.amd) {
+		define("aureooms-js-rational", [], function () {
+			return definition({});
+		});
+	} else if (typeof window === "object" && typeof window.document === "object") {
+		definition(window["rational"] = {});
+	} else console.error("unable to detect type of module to define for aureooms-js-rational");
+})();
