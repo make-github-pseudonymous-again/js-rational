@@ -1,5 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><title>index</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content=""><meta name="groc-document-path" content="index"><meta name="groc-project-path" content="README.md"><meta name="groc-github-url" content="https://github.com/aureooms/js-rational"><link rel="stylesheet" type="text/css" media="all" href="assets/style.css"><script type="text/javascript" src="assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-rational/blob/master/README.md">README.md</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="-js-rational-http-aureooms-github-io-js-rational-"><a href="http://aureooms.github.io/js-rational">js-rational</a></h1>
-<p>rational numbers code bricks for JavaScript</p>
+<p>Rational numbers code bricks for JavaScript.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> [ a , b ] = add( <span class="hljs-number">1</span> , <span class="hljs-number">10</span> , <span class="hljs-number">1</span> , <span class="hljs-number">5</span> ) ;
+a / b === <span class="hljs-number">3</span> / <span class="hljs-number">10</span> ; <span class="hljs-comment">// true</span></code></pre>
 <p><a href="https://raw.githubusercontent.com/aureooms/js-rational/master/LICENSE"><img src="http://img.shields.io/npm/l/aureooms-js-rational.svg?style=flat" alt="NPM license"></a>
 <a href="https://www.npmjs.org/package/aureooms-js-rational"><img src="http://img.shields.io/npm/v/aureooms-js-rational.svg?style=flat" alt="NPM version"></a>
 <a href="http://bower.io/search/?q=aureooms-js-rational"><img src="http://img.shields.io/bower/v/aureooms-js-rational.svg?style=flat" alt="Bower version"></a>
@@ -10,4 +12,52 @@
 <a href="https://codeclimate.com/github/aureooms/js-rational"><img src="http://img.shields.io/codeclimate/github/aureooms/js-rational.svg?style=flat" alt="Code Climate"></a>
 <a href="https://www.npmjs.org/package/aureooms-js-rational"><img src="http://img.shields.io/npm/dm/aureooms-js-rational.svg?style=flat" alt="NPM downloads per month"></a>
 <a href="https://github.com/aureooms/js-rational/issues"><img src="http://img.shields.io/github/issues/aureooms/js-rational.svg?style=flat" alt="GitHub issues"></a>
-<a href="http://inch-ci.org/github/aureooms/js-rational"><img src="http://inch-ci.org/github/aureooms/js-rational.svg?branch=master&amp;style=shields" alt="Inline docs"></a></p></div></div></div></div></body></html>
+<a href="http://inch-ci.org/github/aureooms/js-rational"><img src="http://inch-ci.org/github/aureooms/js-rational.svg?branch=master&amp;style=shields" alt="Inline docs"></a></p>
+<p>Can be managed through <a href="https://github.com/jspm/jspm-cli">jspm</a>,
+<a href="https://github.com/duojs/duo">duo</a>,
+<a href="https://github.com/componentjs/component">component</a>,
+<a href="https://github.com/bower/bower">bower</a>,
+<a href="https://github.com/ender-js/Ender">ender</a>,
+<a href="https://github.com/caolan/jam">jam</a>,
+<a href="https://github.com/spmjs/spm">spm</a>,
+and <a href="https://github.com/npm/npm">npm</a>.</p>
+<h2 id="install">Install</h2>
+<h3 id="jspm">jspm</h3>
+<pre><code class="lang-terminal">jspm install github:aureooms/js-rational
+# or
+jspm install npm:aureooms-js-rational</code></pre>
+<h3 id="duo">duo</h3>
+<p>No install step needed for duo!</p>
+<h3 id="component">component</h3>
+<pre><code class="lang-terminal">component install aureooms/js-rational</code></pre>
+<h3 id="bower">bower</h3>
+<pre><code class="lang-terminal">bower install aureooms-js-rational</code></pre>
+<h3 id="ender">ender</h3>
+<pre><code class="lang-terminal">ender add aureooms-js-rational</code></pre>
+<h3 id="jam">jam</h3>
+<pre><code class="lang-terminal">jam install aureooms-js-rational</code></pre>
+<h3 id="spm">spm</h3>
+<pre><code class="lang-terminal">spm install aureooms-js-rational --save</code></pre>
+<h3 id="npm">npm</h3>
+<pre><code class="lang-terminal">npm install aureooms-js-rational --save</code></pre>
+<h2 id="require">Require</h2>
+<h3 id="jspm">jspm</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> rational = <span class="hljs-built_in">require</span>( <span class="hljs-string">"github:aureooms/js-rational"</span> ) ;
+<span class="hljs-comment">// or</span>
+<span class="hljs-keyword">import</span> rational <span class="hljs-keyword">from</span> <span class="hljs-string">'aureooms-js-rational'</span> ;</code></pre>
+<h3 id="duo">duo</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> rational = <span class="hljs-built_in">require</span>( <span class="hljs-string">"aureooms/js-rational"</span> ) ;</code></pre>
+<h3 id="component-ender-spm-npm">component, ender, spm, npm</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> rational = <span class="hljs-built_in">require</span>( <span class="hljs-string">"aureooms-js-rational"</span> ) ;</code></pre>
+<h3 id="bower">bower</h3>
+<p>The script tag exposes the global variable <code>rational</code>.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/aureooms-js-rational/js/dist/rational.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
+<p>Alternatively, you can use any tool mentioned <a href="http://bower.io/docs/tools/">here</a>.</p>
+<h3 id="jam">jam</h3>
+<pre><code class="lang-js"><span class="hljs-built_in">require</span>( [ <span class="hljs-string">"aureooms-js-rational"</span> ] , <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> rational </span>) </span>{ ... } ) ;</code></pre>
+<h2 id="use">Use</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> number = <span class="hljs-built_in">require</span>( <span class="hljs-string">'aureooms-js-number'</span> ) ;
+<span class="hljs-keyword">let</span> add = rational._add( number.mul , number.add ) ;
+<span class="hljs-keyword">let</span> sub = rational._sub( number.mul , number.sub ) ;
+<span class="hljs-keyword">let</span> mul = rational._mul( number.mul ) ;
+<span class="hljs-keyword">let</span> div = rational._div( number.mul ) ;</code></pre></div></div></div></div></body></html>
