@@ -1,5 +1,5 @@
 {
-	"name": "aureooms-js-rational",
+	"name": "@aureooms/js-rational",
 	"description": "rational numbers code bricks for JavaScript",
 	"bugs": {
 		"url": "https://github.com/aureooms/js-rational/issues"
