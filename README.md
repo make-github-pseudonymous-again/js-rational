@@ -8,15 +8,15 @@ let [ a , b ] = add( 1 , 10 , 1 , 5 ) ;
 a / b === 3 / 10 ; // true
 ```
 
-[![NPM license](http://img.shields.io/npm/l/aureooms-js-rational.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-rational/master/LICENSE)
-[![NPM version](http://img.shields.io/npm/v/aureooms-js-rational.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-rational)
-[![Bower version](http://img.shields.io/bower/v/aureooms-js-rational.svg?style=flat)](http://bower.io/search/?q=aureooms-js-rational)
+[![NPM license](http://img.shields.io/npm/l/@aureooms/js-rational.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-rational/master/LICENSE)
+[![NPM version](http://img.shields.io/npm/v/@aureooms/js-rational.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-rational)
+[![Bower version](http://img.shields.io/bower/v/@aureooms/js-rational.svg?style=flat)](http://bower.io/search/?q=@aureooms/js-rational)
 [![Build Status](http://img.shields.io/travis/aureooms/js-rational.svg?style=flat)](https://travis-ci.org/aureooms/js-rational)
 [![Coverage Status](http://img.shields.io/coveralls/aureooms/js-rational.svg?style=flat)](https://coveralls.io/r/aureooms/js-rational)
 [![Dependencies Status](http://img.shields.io/david/aureooms/js-rational.svg?style=flat)](https://david-dm.org/aureooms/js-rational#info=dependencies)
 [![devDependencies Status](http://img.shields.io/david/dev/aureooms/js-rational.svg?style=flat)](https://david-dm.org/aureooms/js-rational#info=devDependencies)
 [![Code Climate](http://img.shields.io/codeclimate/github/aureooms/js-rational.svg?style=flat)](https://codeclimate.com/github/aureooms/js-rational)
-[![NPM downloads per month](http://img.shields.io/npm/dm/aureooms-js-rational.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-rational)
+[![NPM downloads per month](http://img.shields.io/npm/dm/@aureooms/js-rational.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-rational)
 [![GitHub issues](http://img.shields.io/github/issues/aureooms/js-rational.svg?style=flat)](https://github.com/aureooms/js-rational/issues)
 [![Inline docs](http://inch-ci.org/github/aureooms/js-rational.svg?branch=master&style=shields)](http://inch-ci.org/github/aureooms/js-rational)
 
@@ -35,7 +35,7 @@ and [npm](https://github.com/npm/npm).
 ```terminal
 jspm install github:aureooms/js-rational
 # or
-jspm install npm:aureooms-js-rational
+jspm install npm:@aureooms/js-rational
 ```
 ### duo
 No install step needed for duo!
@@ -47,27 +47,27 @@ component install aureooms/js-rational
 
 ### bower
 ```terminal
-bower install aureooms-js-rational
+bower install @aureooms/js-rational
 ```
 
 ### ender
 ```terminal
-ender add aureooms-js-rational
+ender add @aureooms/js-rational
 ```
 
 ### jam
 ```terminal
-jam install aureooms-js-rational
+jam install @aureooms/js-rational
 ```
 
 ### spm
 ```terminal
-spm install aureooms-js-rational --save
+spm install @aureooms/js-rational --save
 ```
 
 ### npm
 ```terminal
-npm install aureooms-js-rational --save
+npm install @aureooms/js-rational --save
 ```
 
 ## Require
@@ -75,7 +75,7 @@ npm install aureooms-js-rational --save
 ```js
 let rational = require( "github:aureooms/js-rational" ) ;
 // or
-import rational from 'aureooms-js-rational' ;
+import rational from '@aureooms/js-rational' ;
 ```
 ### duo
 ```js
@@ -84,25 +84,25 @@ let rational = require( "aureooms/js-rational" ) ;
 
 ### component, ender, spm, npm
 ```js
-let rational = require( "aureooms-js-rational" ) ;
+let rational = require( "@aureooms/js-rational" ) ;
 ```
 
 ### bower
 The script tag exposes the global variable `rational`.
 ```html
-<script src="bower_components/aureooms-js-rational/js/dist/rational.min.js"></script>
+<script src="bower_components/@aureooms/js-rational/js/dist/rational.min.js"></script>
 ```
 Alternatively, you can use any tool mentioned [here](http://bower.io/docs/tools/).
 
 ### jam
 ```js
-require( [ "aureooms-js-rational" ] , function ( rational ) { ... } ) ;
+require( [ "@aureooms/js-rational" ] , function ( rational ) { ... } ) ;
 ```
 
 ## Use
 
 ```js
-let number = require( 'aureooms-js-number' ) ;
+let number = require( '@aureooms/js-number' ) ;
 let add = rational._add( number.mul , number.add ) ;
 let sub = rational._sub( number.mul , number.sub ) ;
 let mul = rational._mul( number.mul ) ;
