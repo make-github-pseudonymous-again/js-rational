@@ -8,7 +8,7 @@ let [ a , b ] = add( 1 , 10 , 1 , 5 ) ;
 a / b === 3 / 10 ; // true
 ```
 
-[![NPM license](https://img.shields.io/npm/l/@aureooms/js-rational.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-rational/master/LICENSE)
+[![License](https://img.shields.io/github/license/aureooms/js-rational.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-rational/master/LICENSE)
 [![NPM version](https://img.shields.io/npm/v/@aureooms/js-rational.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-rational)
 [![Bower version](https://img.shields.io/bower/v/@aureooms/js-rational.svg?style=flat)](http://bower.io/search/?q=@aureooms/js-rational)
 [![Build Status](https://img.shields.io/travis/aureooms/js-rational.svg?style=flat)](https://travis-ci.org/aureooms/js-rational)
