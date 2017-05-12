@@ -3,7 +3,7 @@
  * Dummy mul template.
  */
 
-const _mul = function ( mul ) {
+export function _mul ( mul ) {
 
 	return function ( a0 , a1 , b0 , b1 ) {
 
@@ -14,6 +14,5 @@ const _mul = function ( mul ) {
 
 	} ;
 
-} ;
+}
 
-exports._mul = _mul;

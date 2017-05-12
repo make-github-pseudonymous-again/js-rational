@@ -3,7 +3,7 @@
  * Dummy add template.
  */
 
-const _add = function ( mul , add ) {
+export function _add ( mul , add ) {
 
 	return function ( a0 , a1 , b0 , b1 ) {
 
@@ -16,6 +16,5 @@ const _add = function ( mul , add ) {
 
 	} ;
 
-} ;
+}
 
-exports._add = _add ;
