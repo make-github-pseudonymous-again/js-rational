@@ -3,7 +3,7 @@
  * Dummy div template.
  */
 
-export function _div ( mul ) {
+export function _div ( { mul } ) {
 
 	return function ( a0 , a1 , b0 , b1 ) {
 

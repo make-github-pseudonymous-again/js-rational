@@ -3,7 +3,7 @@
  * Dummy sub template.
  */
 
-export function _sub ( mul , sub ) {
+export function _sub ( { mul , sub } ) {
 
 	return function ( a0 , a1 , b0 , b1 ) {
 

@@ -3,7 +3,7 @@
  * Dummy mul template.
  */
 
-export function _mul ( mul ) {
+export function _mul ( { mul } ) {
 
 	return function ( a0 , a1 , b0 , b1 ) {
 

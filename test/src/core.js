@@ -60,10 +60,10 @@ const ALU = [
 	}
 ];
 
-const add = [ 'add' , '+' , '_add' , alu => _add( alu.mul , alu.add ) ] ;
-const sub = [ 'sub' , '-' , '_sub' , alu => _sub( alu.mul , alu.sub ) ] ;
-const mul = [ 'mul' , '*' , '_mul' , alu => _mul( alu.mul ) ] ;
-const div = [ 'div' , '/' , '_div' , alu => _div( alu.mul ) ] ;
+const add = [ 'add' , '+' , '_add' , alu => _add( alu ) ] ;
+const sub = [ 'sub' , '-' , '_sub' , alu => _sub( alu ) ] ;
+const mul = [ 'mul' , '*' , '_mul' , alu => _mul( alu ) ] ;
+const div = [ 'div' , '/' , '_div' , alu => _div( alu ) ] ;
 const cmp = [ 'cmp' , '~' , '_cmp' , alu => _cmp( alu ) ] ;
 
 const PARAMS = [

@@ -3,7 +3,7 @@
  * Dummy add template.
  */
 
-export function _add ( mul , add ) {
+export function _add ( { mul , add } ) {
 
 	return function ( a0 , a1 , b0 , b1 ) {
 
