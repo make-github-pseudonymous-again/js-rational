@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl">
-  <title data-ice="title">Home | @aureooms/js-rational</title>
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/mul.js | @aureooms/js-rational</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -38,25 +38,27 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="-a-href--http---aureooms-github-io-js-rational--js-rational--a-"><a href="http://aureooms.github.io/js-rational">js-rational</a></h1><p><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Number-systems.svg" width="864"></p>
-<p>Rational numbers code bricks for JavaScript.</p>
-<pre><code class="lang-js"><code class="source-code prettyprint">let [ a , b ] = add( 1 , 10 , 1 , 5 ) ;
-a / b === 3 / 10 ; // true</code>
+<div class="content" data-ice="content"><h1 data-ice="title">src/mul.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
+/**
+ * Dummy mul template.
+ */
+
+export function _mul ( { mul } ) {
+
+	return function ( a0 , a1 , b0 , b1 ) {
+
+		const d = mul( a1 , b1 ) ;
+		const n = mul( a0 , b0 ) ;
+
+		return [ n , d ] ;
+
+	} ;
+
+}
+
 </code></pre>
-<p><a href="https://raw.githubusercontent.com/aureooms/js-rational/master/LICENSE"><img src="https://img.shields.io/github/license/aureooms/js-rational.svg" alt="License"></a>
-<a href="https://www.npmjs.org/package/@aureooms/js-rational"><img src="https://img.shields.io/npm/v/@aureooms/js-rational.svg" alt="Version"></a>
-<a href="https://travis-ci.org/aureooms/js-rational/branches"><img src="https://img.shields.io/travis/aureooms/js-rational/master.svg" alt="Build"></a>
-<a href="https://david-dm.org/aureooms/js-rational"><img src="https://img.shields.io/david/aureooms/js-rational.svg" alt="Dependencies"></a>
-<a href="https://david-dm.org/aureooms/js-rational?type=dev"><img src="https://img.shields.io/david/dev/aureooms/js-rational.svg" alt="Dev dependencies"></a>
-<a href="https://github.com/aureooms/js-rational/issues"><img src="https://img.shields.io/github/issues/aureooms/js-rational.svg" alt="GitHub issues"></a>
-<a href="https://www.npmjs.org/package/@aureooms/js-rational"><img src="https://img.shields.io/npm/dm/@aureooms/js-rational.svg" alt="Downloads"></a></p>
-<p><a href="https://codeclimate.com/github/aureooms/js-rational/issues"><img src="https://img.shields.io/codeclimate/issues/aureooms/js-rational.svg" alt="Code issues"></a>
-<a href="https://codeclimate.com/github/aureooms/js-rational/trends/churn"><img src="https://img.shields.io/codeclimate/maintainability/aureooms/js-rational.svg" alt="Code maintainability"></a>
-<a href="https://codecov.io/gh/aureooms/js-rational"><img src="https://img.shields.io/codecov/c/gh/aureooms/js-rational/master.svg" alt="Code coverage (cov)"></a>
-<a href="https://codeclimate.com/github/aureooms/js-rational/trends/technical_debt"><img src="https://img.shields.io/codeclimate/tech-debt/aureooms/js-rational.svg" alt="Code technical debt"></a>
-<a href="https://github.com/aureooms/js-rational/source.html"><img src="https://github.com/aureooms/js-rational/badge.svg" alt="Documentation"></a>
-<a href="https://bundlephobia.com/result?p=@aureooms/js-rational"><img src="https://img.shields.io/bundlephobia/minzip/@aureooms/js-rational" alt="Package size"></a></p>
-</div>
+
 </div>
 
 <footer class="footer">
