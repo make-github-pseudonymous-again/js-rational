@@ -1,8 +1,10 @@
 import test from 'ava';
-import { _add , _sub , _mul , _div } from '../../src';
+import { _add , _sub , _mul , _div , _cmp } from '../../src';
 
 import int from 'int' ;
 import { ZZ } from '@aureooms/js-integer' ;
+
+const GOOGOL = '10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000' ;
 
 function macro ( t , alu , [ [ _x , _y , _z , factory ] , a , b , c , d , e ] ) {
 
@@ -18,7 +20,8 @@ function macro ( t , alu , [ [ _x , _y , _z , factory ] , a , b , c , d , e ] ) 
 
 	const z = apply( a0 , a1 , b0 , b1 ) ;
 
-	t.is(num(z), e);
+	if ( Number.isInteger(z) ) t.is(e, z) ;
+	else t.is(e, num(z));
 
 }
 
@@ -28,13 +31,18 @@ macro.title = ( _ , alu , [ [ name , op , impl ] , a , b , c , d , e] ) => {
 
 const ALU = [
 	{
-		name : 'node-int based alu',
+		name : 'int',
 		add : (a, b) => a.add(b),
 		sub : (a, b) => a.sub(b),
 		mul : (a, b) => a.mul(b),
 		div : (a, b) => a.div(b),
 		reg : x => int(x),
-		str : x => x.toString()
+		str : x => x.toString(),
+		jz  : x => x.eq(0),
+		lt0 : x => x.lt(0),
+		lt  : (a,b) => a.lt(b),
+		neg : x => x.neg(),
+		divmod : (a,b) => [a.div(b), a.mod(b)],
 	},
 	{
 		name : '@aureooms/js-integer',
@@ -43,8 +51,12 @@ const ALU = [
 		mul : (a, b) => a.mul(b),
 		div : (a, b) => a.div(b),
 		reg : x => ZZ.from(x),
-		str : x => x.toString()
-
+		str : x => x.toString(),
+		jz  : x => x.iszero(),
+		lt0 : x => x.sign() < 0,
+		lt  : (a,b) => a.lt(b),
+		neg : x => x.opposite(),
+		divmod : (a,b) => a.divmod(b),
 	}
 ];
 
@@ -52,6 +64,7 @@ const add = [ 'add' , '+' , '_add' , alu => _add( alu.mul , alu.add ) ] ;
 const sub = [ 'sub' , '-' , '_sub' , alu => _sub( alu.mul , alu.sub ) ] ;
 const mul = [ 'mul' , '*' , '_mul' , alu => _mul( alu.mul ) ] ;
 const div = [ 'div' , '/' , '_div' , alu => _div( alu.mul ) ] ;
+const cmp = [ 'cmp' , '~' , '_cmp' , alu => _cmp( alu ) ] ;
 
 const PARAMS = [
 
@@ -82,6 +95,41 @@ const PARAMS = [
 	[ div , '18', '10', '2', '10', 9 ] ,
 	[ div , '1', '3', '1', '6', 2 ] ,
 	[ div , '1', '3', '2', '6', 1 ] ,
+
+	[ cmp , '3', '4', '1', '4', 1 ] ,
+	[ cmp , '1', '10', '2', '10', -1 ] ,
+	[ cmp , '5', '10', '2', '10', 1 ] ,
+	[ cmp , '18', '10', '2', '10', 1 ] ,
+	[ cmp , '1', '3', '1', '6', 1 ] ,
+	[ cmp , '1', '3', '2', '6', 0 ] ,
+	[ cmp , '6', '7', '13', '14', -1 ] ,
+	[ cmp , '7', '6', '14', '13', 1 ] ,
+
+	[ cmp , '1', '0', '6', '7', 1 ] ,
+	[ cmp , '1', '0', '-6', '7', 1 ] ,
+	[ cmp , '-1', '0', '6', '7', -1 ] ,
+	[ cmp , '-1', '0', '-6', '7', -1 ] ,
+
+	[ cmp , '1', '0', '999999', '1', 1 ] ,
+	[ cmp , '1', '0', '-999999', '1', 1 ] ,
+	[ cmp , '-1', '0', '999999', '1', -1 ] ,
+	[ cmp , '-1', '0', '-999999', '1', -1 ] ,
+
+	[ cmp , '1', '0', '1', '0', 0 ] ,
+	[ cmp , '1', '0', '-1', '0', 1 ] ,
+	[ cmp , '-1', '0', '1', '0', -1 ] ,
+	[ cmp , '-1', '0', '-1', '0', 0 ] ,
+
+	[ cmp , '1', '0', '999999', '0', 0 ] ,
+	[ cmp , '1', '0', '-999999', '0', 1 ] ,
+	[ cmp , '-1', '0', '999999', '0', -1 ] ,
+	[ cmp , '-1', '0', '-999999', '0', 0 ] ,
+
+	[ cmp , GOOGOL, '7', GOOGOL, '3', -1 ] ,
+	[ cmp , GOOGOL, '3', GOOGOL, '7', 1 ] ,
+	[ cmp , GOOGOL, '7', GOOGOL, '7', 0 ] ,
+	[ cmp , GOOGOL, '3', GOOGOL, '3', 0 ] ,
+	[ cmp , GOOGOL, GOOGOL, GOOGOL, GOOGOL, 0 ] ,
 
 ] ;
 
