@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@aureooms/js-integer-big-endian/-/js-integer-big-endian-8.0.0.tgz#fdf21db95bb6ce88763fd91646e3c09d865fd321"
   integrity sha512-2YuH9/ejGk6RCOVjsSVNG2evoHPF9hTjdle1sRET91hh566uVkcBezE7DT/iLGBsSoz8v1OhPRT83EazAgbq6g==
 
-"@aureooms/js-integer@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-integer/-/js-integer-5.0.0.tgz#9009c5b71a8ac192476620fff22a877f461cc173"
-  integrity sha512-AUr6206CSQ8BOf5KyUOZ6yvNdEb6CIssEA+tceroSGCoZG6J9A9cWQUay801G8vVcGjf9Sq26Xc5/Jd/1j6MaQ==
+"@aureooms/js-integer@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@aureooms/js-integer/-/js-integer-5.0.1.tgz#da348b835d4322037e83460211957bdc99e10c3d"
+  integrity sha512-HVvgYIffxNP+rB5ma7JES5Ud4cZYp7+hLVn4givwr3aQ4zpEHJLOrYb2jIHK4u05sCA5h7XuPY7mPavUBd5/Fg==
   dependencies:
     "@aureooms/js-error" "^4.0.0"
     "@aureooms/js-integer-big-endian" "^8.0.0"
