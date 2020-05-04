@@ -1,5 +1,5 @@
 import test from 'ava';
-import { _add , _sub , _mul , _div , _cmp , _cmp_no_bounds , _simplify } from '../../src';
+import { _add , _sub , _mul , _div , _pow , _cmp , _cmp_no_bounds , _simplify } from '../../src';
 
 import int from 'int' ;
 import BN from 'bn.js' ;
@@ -27,6 +27,26 @@ function binary ( t , alu , [ [ _x , _y , factory ] , a , b , c , d , e ] ) {
 
 binary.title = ( _ , alu , [ [ name , op , impl ] , a , b , c , d , e] ) => {
 	return `${name}<${impl.name}, ${alu.name}> ${a}/${b} ${op} ${c}/${d} = ${e}` ;
+} ;
+
+function binary_n ( t , alu , [ [ _x , _y , factory ] , a , b , n , e ] ) {
+
+	const apply = factory( alu );
+
+	const num  = x => Number(alu.str(x[0])) / Number(alu.str(x[1])) ;
+
+	const a0 = alu.reg(a);
+	const a1 = alu.reg(b);
+
+	const z = apply( a0 , a1 , n ) ;
+
+	if ( Number.isInteger(z) ) t.is(e, z) ;
+	else t.is(e, num(z));
+
+}
+
+binary_n.title = ( _ , alu , [ [ name , op , impl ] , a , b , n , e] ) => {
+	return `${name}<${impl.name}, ${alu.name}> ${a}/${b} ${op} ${n} = ${e}` ;
 } ;
 
 function unary ( t , alu , [ [ _x , _y , factory ] , a , b , e ] ) {
@@ -63,6 +83,7 @@ const ALU = [
 		neg : x => x.neg(),
 		sgn : x => x.cmp(0),
 		divmod : (a,b) => [a.div(b), a.mod(b)],
+		pown : (x,n) => x.pow(n),
 	},
 	{
 		name : 'bn.js',
@@ -85,6 +106,7 @@ const ALU = [
 			const gcd = a.gcd(b) ;
 			return { u: b.div(gcd), v: a.div(gcd) } ;
 		} ,
+		pown : (x,n) => x.pow(new BN(n)),
 	},
 	{
 		name : '@aureooms/js-integer',
@@ -101,6 +123,7 @@ const ALU = [
 		neg : x => x.opposite(),
 		divmod : (a,b) => a.divmod(b),
 		egcd : (a,b) => a.egcd(b),
+		pown : (x,n) => x.pown(n),
 	}
 ];
 
@@ -108,6 +131,7 @@ const add = [ 'add' , '+' , [ _add ] , binary ] ;
 const sub = [ 'sub' , '-' , [ _sub ] , binary ] ;
 const mul = [ 'mul' , '*' , [ _mul ] , binary ] ;
 const div = [ 'div' , '/' , [ _div ] , binary ] ;
+const pow = [ 'pow' , '^' , [ _pow ] , binary_n ] ;
 const cmp = [ 'cmp' , '~' , [ _cmp , _cmp_no_bounds ] , binary ] ;
 const simplify = [ 'simplify' , '=' , [ _simplify ] , unary , alu => alu.egcd ] ;
 
@@ -140,6 +164,12 @@ const PARAMS = [
 	[ div , '18', '10', '2', '10', 9 ] ,
 	[ div , '1', '3', '1', '6', 2 ] ,
 	[ div , '1', '3', '2', '6', 1 ] ,
+
+	[ pow , '2', '3', 4, 16 / 81 ] ,
+	[ pow , '-2', '3', 4, 16 / 81 ] ,
+
+	[ pow , '2', '3', 3, 8 / 27 ] ,
+	[ pow , '-2', '3', 3, - 8 / 27 ] ,
 
 	[ cmp , '3', '4', '1', '4', 1 ] ,
 	[ cmp , '1', '10', '2', '10', -1 ] ,
