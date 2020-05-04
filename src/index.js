@@ -4,3 +4,4 @@ export * from './mul' ;
 export * from './sub' ;
 export * from './cmp' ;
 export * from './cmp_no_bounds' ;
+export * from './simplify' ;
