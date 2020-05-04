@@ -1,12 +1,12 @@
 import test from 'ava';
-import { _add , _sub , _mul , _div , _cmp } from '../../src';
+import { _add , _sub , _mul , _div , _cmp , _cmp_no_bounds } from '../../src';
 
 import int from 'int' ;
 import { ZZ } from '@aureooms/js-integer' ;
 
 const GOOGOL = '10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000' ;
 
-function macro ( t , alu , [ [ _x , _y , _z , factory ] , a , b , c , d , e ] ) {
+function macro ( t , alu , [ [ _x , _y , factory ] , a , b , c , d , e ] ) {
 
 	const apply = factory( alu );
 
@@ -26,7 +26,7 @@ function macro ( t , alu , [ [ _x , _y , _z , factory ] , a , b , c , d , e ] ) 
 }
 
 macro.title = ( _ , alu , [ [ name , op , impl ] , a , b , c , d , e] ) => {
-	return `${name}<${impl}, ${alu.name}> ${a}/${b} ${op} ${c}/${d} = ${e}` ;
+	return `${name}<${impl.name}, ${alu.name}> ${a}/${b} ${op} ${c}/${d} = ${e}` ;
 } ;
 
 const ALU = [
@@ -60,11 +60,11 @@ const ALU = [
 	}
 ];
 
-const add = [ 'add' , '+' , '_add' , alu => _add( alu ) ] ;
-const sub = [ 'sub' , '-' , '_sub' , alu => _sub( alu ) ] ;
-const mul = [ 'mul' , '*' , '_mul' , alu => _mul( alu ) ] ;
-const div = [ 'div' , '/' , '_div' , alu => _div( alu ) ] ;
-const cmp = [ 'cmp' , '~' , '_cmp' , alu => _cmp( alu ) ] ;
+const add = [ 'add' , '+' , [ _add ] ] ;
+const sub = [ 'sub' , '-' , [ _sub ] ] ;
+const mul = [ 'mul' , '*' , [ _mul ] ] ;
+const div = [ 'div' , '/' , [ _div ] ] ;
+const cmp = [ 'cmp' , '~' , [ _cmp , _cmp_no_bounds ] ] ;
 
 const PARAMS = [
 
@@ -134,5 +134,6 @@ const PARAMS = [
 ] ;
 
 for (const alu of ALU)
-for (const params of PARAMS)
-	test(macro, alu, params);
+for (const [[name, symbol, implementations], ...params] of PARAMS)
+for (const factory of implementations)
+	test(macro, alu, [[name, symbol, factory], ...params]);
