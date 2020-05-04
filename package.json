@@ -29,7 +29,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@aureooms/js-integer": "5.0.1",
+    "@aureooms/js-integer": "5.1.2",
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.6",
     "@babel/polyfill": "7.8.7",
