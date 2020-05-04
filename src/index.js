@@ -6,3 +6,5 @@ export * from './pow' ;
 export * from './cmp' ;
 export * from './cmp_no_bounds' ;
 export * from './simplify' ;
+export * from './digits' ;
+export * from './_stringify_digits' ;

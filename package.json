@@ -27,9 +27,13 @@
   "bugs": {
     "url": "https://github.com/aureooms/js-rational/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@aureooms/js-itertools": "^4.0.0"
+  },
   "devDependencies": {
     "@aureooms/js-integer": "6.0.0",
+    "@aureooms/js-number": "^3.1.0",
+    "@aureooms/js-prime": "^4.0.0",
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.6",
     "@babel/polyfill": "7.8.7",

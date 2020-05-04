@@ -4,7 +4,7 @@
 
 export function _decimals ( { b , eq , muln , divmod } ) {
 
-	return function* ( d , n , x ) {
+	return function* ( d , n , hasrepetend , x ) {
 
 		// Computes the length of the repetend of x/d (1 <= x < d) in base b
 		// with transient part of size n.
@@ -18,7 +18,9 @@ export function _decimals ( { b , eq , muln , divmod } ) {
 
 		}
 
-		first = x ;
+		if ( !hasrepetend ) return ;
+
+		const first = x ;
 
 		x = muln(x, b) ;
 		const [q, r] = divmod(x, d) ;

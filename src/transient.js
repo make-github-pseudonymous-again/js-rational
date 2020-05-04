@@ -22,7 +22,7 @@ export function _transient ( { bfactors , jz , gt1 , divmodn } ) {
 
 				if (!jz(r)) break ;
 
-				++mm ;
+				++m ;
 				d = q ;
 
 			}

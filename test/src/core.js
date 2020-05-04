@@ -1,7 +1,17 @@
 import test from 'ava';
-import { _add , _sub , _mul , _div , _pow , _cmp , _cmp_no_bounds , _simplify } from '../../src';
+import { __factorize__ } from '@aureooms/js-prime' ;
+import { $2, iadd1, eq0, gt1, divmod } from "@aureooms/js-number" ;
+import {
+	_add , _sub , _mul , _div , _pow ,
+	_cmp , _cmp_no_bounds ,
+	_simplify , _digits , _stringify_digits
+} from '../../src';
 
 const GOOGOL = '10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000' ;
+
+const factorize = __factorize__( $2, iadd1, eq0, gt1, divmod ) ;
+
+const ufactors = n => new Set(factorize(n)) ;
 
 import { ALU } from './_fixtures' ;
 
@@ -51,14 +61,12 @@ function unary ( t , alu , [ [ _x , _y , factory ] , a , b , e ] ) {
 
 	const apply = factory( alu );
 
-	const repr = x => `${alu.str(x[0])}/${alu.str(x[1])}` ;
-
 	const _a = alu.reg(a);
 	const _b = alu.reg(b);
 
 	const z = apply( _a , _b ) ;
 
-	t.is(e, repr(z));
+	t.is(e, z);
 
 }
 
@@ -72,7 +80,22 @@ const mul = [ 'mul' , '*' , [ _mul ] , binary ] ;
 const div = [ 'div' , '/' , [ _div ] , binary ] ;
 const pow = [ 'pow' , '^' , [ _pow ] , binary_n ] ;
 const cmp = [ 'cmp' , '~' , [ _cmp , _cmp_no_bounds ] , binary ] ;
-const simplify = [ 'simplify' , '=' , [ _simplify ] , unary , alu => alu.egcd ] ;
+const simplify = [ 'simplify' , '=' , [
+	alu => {
+		const repr = x => `${alu.str(x[0])}/${alu.str(x[1])}` ;
+		const simp = _simplify(alu) ;
+		return (a,b) => repr(simp(a,b)) ;
+	}
+] , unary , alu => alu.egcd ] ;
+
+const stringify = [ 'stringify' , '=' , [
+	alu => {
+		const b = 10 ;
+		const bfactors = ufactors( b ) ;
+		const digits = _digits({ b , bfactors , ...alu }) ;
+		return ( x , d ) => _stringify_digits( alu.str , b , digits(x, d) ) ;
+	}
+] , unary , alu => alu.egcd ] ;
 
 const PARAMS = [
 
@@ -165,6 +188,19 @@ const PARAMS = [
 	[ simplify , '-56713727820156410577229101238628035243' , '170141183460469231731687303715884105729' , '-1/3' ] ,
 	[ simplify , '-170141183460469231731687303715884105729' , '3' , '-56713727820156410577229101238628035243/1' ] ,
 	[ simplify , '-3' , '170141183460469231731687303715884105729' , '-1/56713727820156410577229101238628035243' ] ,
+
+	[ stringify , '1' , '7' , '0.|142857' ] ,
+	[ stringify , '-4' , '8' , '-0.5' ] ,
+	[ stringify , '7' , '14' , '0.5' ] ,
+	[ stringify , '0' , '43' , '0' ] ,
+	[ stringify , '86' , '43' , '2' ] ,
+	[ stringify , '2' , '46' , '0.|0434782608695652173913' ] ,
+	[ stringify , '1' , '46' , '0.0|2173913043478260869565' ] ,
+	[ stringify , '1' , '14' , '0.0|714285'] ,
+	[ stringify , '1' , '45' , '0.0|2' ] ,
+	[ stringify , '22' , '7' , '3.|142857' ] ,
+	[ stringify , '355' , '113' , '3.|1415929203539823008849557522123893805309734513274336283185840707964601769911504424778761061946902654867256637168' ] ,
+	[ stringify , '7775' , '2260' , '3.44|0265486725663716814159292035398230088495575221238938053097345132743362831858407079646017699115044247787610619469' ] ,
 
 ] ;
 
