@@ -40,7 +40,7 @@ const ALU = [
 		str : x => x.toString(),
 		jz  : x => x.eq(0),
 		lt0 : x => x.lt(0),
-		lt  : (a,b) => a.lt(b),
+		cmp  : (a,b) => a.cmp(b),
 		neg : x => x.neg(),
 		divmod : (a,b) => [a.div(b), a.mod(b)],
 	},
@@ -54,7 +54,7 @@ const ALU = [
 		str : x => x.toString(),
 		jz  : x => x.iszero(),
 		lt0 : x => x.sign() < 0,
-		lt  : (a,b) => a.lt(b),
+		cmp  : (a,b) => a.cmp(b),
 		neg : x => x.opposite(),
 		divmod : (a,b) => a.divmod(b),
 	}
