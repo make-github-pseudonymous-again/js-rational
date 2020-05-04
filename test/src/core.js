@@ -2,6 +2,7 @@ import test from 'ava';
 import { _add , _sub , _mul , _div , _cmp , _cmp_no_bounds , _simplify } from '../../src';
 
 import int from 'int' ;
+import BN from 'bn.js' ;
 import { ZZ } from '@aureooms/js-integer' ;
 
 const GOOGOL = '10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000' ;
@@ -62,6 +63,28 @@ const ALU = [
 		neg : x => x.neg(),
 		sgn : x => x.cmp(0),
 		divmod : (a,b) => [a.div(b), a.mod(b)],
+	},
+	{
+		name : 'bn.js',
+		add : (a, b) => a.add(b),
+		sub : (a, b) => a.sub(b),
+		mul : (a, b) => a.mul(b),
+		div : (a, b) => a.div(b),
+		reg : x => new BN(x),
+		str : x => x.toString(),
+		jz  : x => x.eqn(0),
+		lt0 : x => x.ltn(0),
+		cmp  : (a,b) => a.cmp(b),
+		sgn : x => x.cmpn(0),
+		neg : x => x.neg(),
+		divmod : (a,b) => {
+			const { div , mod } = a.divmod(b) ;
+			return [div, mod] ;
+		} ,
+		egcd : (a,b) => {
+			const gcd = a.gcd(b) ;
+			return { u: b.div(gcd), v: a.div(gcd) } ;
+		} ,
 	},
 	{
 		name : '@aureooms/js-integer',
