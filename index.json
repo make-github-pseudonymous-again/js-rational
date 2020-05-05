@@ -566,6 +566,214 @@
   {
     "__docId__": 48,
     "kind": "file",
+    "name": "src/_constants.js",
+    "content": "\nexport const DECIMAL_PREFIX = '.' ;\nexport const REPETEND_PREFIX = '|' ;\nexport const FRACTION_SEP = '/' ;\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-rational/src/_constants.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "DECIMAL_PREFIX",
+    "memberof": "src/_constants.js",
+    "static": true,
+    "longname": "src/_constants.js~DECIMAL_PREFIX",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/_constants.js",
+    "importStyle": "{DECIMAL_PREFIX}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "variable",
+    "name": "REPETEND_PREFIX",
+    "memberof": "src/_constants.js",
+    "static": true,
+    "longname": "src/_constants.js~REPETEND_PREFIX",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/_constants.js",
+    "importStyle": "{REPETEND_PREFIX}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "variable",
+    "name": "FRACTION_SEP",
+    "memberof": "src/_constants.js",
+    "static": true,
+    "longname": "src/_constants.js~FRACTION_SEP",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/_constants.js",
+    "importStyle": "{FRACTION_SEP}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "name": "src/_parse_fixed_point.js",
+    "content": "\nimport { DECIMAL_PREFIX , REPETEND_PREFIX } from './_constants' ;\n\nexport function _parse_fixed_point ( { _chr , reg , sub } ) {\n\n\treturn function ( base , s ) {\n\n\t\tconst [ integral , decimal ] = s.split(DECIMAL_PREFIX) ;\n\t\tconst [ transient , repetend ] = decimal.split(REPETEND_PREFIX) ;\n\n\t\tconst _integral = integral === '0' ? '' : integral ;\n\t\tconst _repetend = repetend || '' ;\n\n\t\tconst _denominator = ( !_repetend ?\n\t\t\t\t_chr(1) :\n\t\t\t\t(new Array(repetend.length+1)).join( _chr(base-1) )\n\t\t\t) +\n\t\t\t(new Array(transient.length+1)).join( _chr(0) ) ;\n\n\t\tconst _big = _integral + transient + _repetend ;\n\t\tconst _small = ( _integral + transient ) || '0' ;\n\n\t\tconst _bign = reg(_big, base) ;\n\t\tconst _smalln = reg(_small, base) ;\n\n\t\tconst numerator = _repetend ? sub(_bign, _smalln) : _smalln ;\n\t\tconst denominator = reg(_denominator, base) ;\n\n\t\treturn [ numerator , denominator ] ;\n\n\t}\n\n}\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-rational/src/_parse_fixed_point.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 53,
+    "kind": "function",
+    "name": "_parse_fixed_point",
+    "memberof": "src/_parse_fixed_point.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/_parse_fixed_point.js~_parse_fixed_point",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/_parse_fixed_point.js",
+    "importStyle": "{_parse_fixed_point}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"_chr\": *, \"reg\": *, \"sub\": *}"
+        ],
+        "defaultRaw": {
+          "_chr": null,
+          "reg": null,
+          "sub": null
+        },
+        "defaultValue": "{\"_chr\":null,\"reg\":null,\"sub\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "src/_parse_fraction.js",
+    "content": "\nimport { FRACTION_SEP } from './_constants' ;\n\nexport function _parse_fraction ( { reg } ) {\n\n\treturn function ( base , s ) {\n\n\t\tconst [ _numerator , _denominator ] = s.split(FRACTION_SEP) ;\n\n\t\treturn [ reg(_numerator, base), reg(_denominator, base) ] ;\n\n\t}\n\n}\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-rational/src/_parse_fraction.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "function",
+    "name": "_parse_fraction",
+    "memberof": "src/_parse_fraction.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/_parse_fraction.js~_parse_fraction",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/_parse_fraction.js",
+    "importStyle": "{_parse_fraction}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"reg\": *}"
+        ],
+        "defaultRaw": {
+          "reg": null
+        },
+        "defaultValue": "{\"reg\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "file",
+    "name": "src/_stringify_digits.js",
+    "content": "export function _stringify_digits ( { str } ) {\n\n\treturn function ( base , { sign , integral , transient , repetend } ) {\n\n\t\tconst toStr = x => str(x, base);\n\n\t\tlet repr = '' ;\n\n\t\tif (sign < 0) repr += '-' ;\n\n\t\trepr += toStr(integral) ;\n\n\t\tif (transient.length || repetend.length) repr += '.' ;\n\t\trepr += transient.map(toStr).join('') ;\n\n\t\tif (repetend.length) repr += '|' ;\n\t\trepr += repetend.map(toStr).join('') ;\n\n\t\treturn repr ;\n\n\t} ;\n\n}\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-rational/src/_stringify_digits.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 57,
+    "kind": "function",
+    "name": "_stringify_digits",
+    "memberof": "src/_stringify_digits.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/_stringify_digits.js~_stringify_digits",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/_stringify_digits.js",
+    "importStyle": "{_stringify_digits}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"str\": *}"
+        ],
+        "defaultRaw": {
+          "str": null
+        },
+        "defaultValue": "{\"str\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "file",
     "name": "src/add.js",
     "content": "\n/**\n * Dummy add template.\n */\n\nexport function _add ( { mul , add } ) {\n\n\treturn function ( a0 , a1 , b0 , b1 ) {\n\n\t\tconst d = mul( a1 , b1 ) ;\n\t\tconst x = mul( a0 , b1 ) ;\n\t\tconst y = mul( b0 , a1 ) ;\n\t\tconst n = add( x , y ) ;\n\n\t\treturn [ n , d ] ;\n\n\t} ;\n\n}\n\n",
     "static": true,
@@ -575,7 +783,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 49,
+    "__docId__": 59,
     "kind": "function",
     "name": "_add",
     "memberof": "src/add.js",
@@ -609,10 +817,10 @@
     }
   },
   {
-    "__docId__": 50,
+    "__docId__": 60,
     "kind": "file",
     "name": "src/cmp.js",
-    "content": "export function _cmp ( { jz , lt0 , lt , neg , divmod } ) {\n\n\tconst compare_positive_fractions = function (a,b,c,d) {\n\t\tif (jz(b)) {\n\t\t\tif(jz(d)) return 0;\n\t\t\treturn 1;\n\t\t}\n\t\tif (jz(d)) return -1;\n\t\tconst [ q1 , r1 ] = divmod(a, b) ;\n\t\tconst [ q2 , r2 ] = divmod(c, d) ;\n\t\tif (lt(q1,q2)) return -1;\n\t\tif (lt(q2,q1)) return 1;\n\t\treturn compare_positive_fractions(d,r2,b,r1);\n\t}\n\n\tconst cmp = function (a,b,c,d) {\n\t\tif (lt0(b)) { b = neg(b); a = neg(a); }\n\t\tif (lt0(d)) { d = neg(d); c = neg(c); }\n\t\tif (lt0(a)) {\n\t\t\tif (lt0(c)) return compare_positive_fractions(neg(c),d,neg(a),b);\n\t\t\treturn -1;\n\t\t}\n\t\tif (lt0(c)) return 1;\n\t\treturn compare_positive_fractions(a,b,c,d);\n\t}\n\n\treturn cmp ;\n\n}\n",
+    "content": "export function _cmp ( { jz , lt0 , cmp , neg , divmod } ) {\n\n\tconst compare_positive_fractions = function (a,b,c,d) {\n\t\tif (jz(b)) {\n\t\t\tif(jz(d)) return 0;\n\t\t\treturn 1;\n\t\t}\n\t\tif (jz(d)) return -1;\n\t\tconst [ q1 , r1 ] = divmod(a, b) ;\n\t\tconst [ q2 , r2 ] = divmod(c, d) ;\n\t\treturn cmp(q1, q2) || compare_positive_fractions(d,r2,b,r1);\n\t}\n\n\treturn function (a,b,c,d) {\n\t\tif (lt0(b)) { b = neg(b); a = neg(a); }\n\t\tif (lt0(d)) { d = neg(d); c = neg(c); }\n\t\tif (lt0(a)) {\n\t\t\tif (lt0(c)) return compare_positive_fractions(neg(c),d,neg(a),b);\n\t\t\treturn -1;\n\t\t}\n\t\tif (lt0(c)) return 1;\n\t\treturn compare_positive_fractions(a,b,c,d);\n\t}\n\n}\n",
     "static": true,
     "longname": "/home/aureooms/dev/js/js-rational/src/cmp.js",
     "access": "public",
@@ -620,7 +828,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 51,
+    "__docId__": 61,
     "kind": "function",
     "name": "_cmp",
     "memberof": "src/cmp.js",
@@ -639,16 +847,16 @@
       {
         "name": "objectPattern",
         "types": [
-          "{\"jz\": *, \"lt0\": *, \"lt\": *, \"neg\": *, \"divmod\": *}"
+          "{\"jz\": *, \"lt0\": *, \"cmp\": *, \"neg\": *, \"divmod\": *}"
         ],
         "defaultRaw": {
           "jz": null,
           "lt0": null,
-          "lt": null,
+          "cmp": null,
           "neg": null,
           "divmod": null
         },
-        "defaultValue": "{\"jz\":null,\"lt0\":null,\"lt\":null,\"neg\":null,\"divmod\":null}"
+        "defaultValue": "{\"jz\":null,\"lt0\":null,\"cmp\":null,\"neg\":null,\"divmod\":null}"
       }
     ],
     "return": {
@@ -658,7 +866,155 @@
     }
   },
   {
-    "__docId__": 52,
+    "__docId__": 62,
+    "kind": "file",
+    "name": "src/cmp_no_bounds.js",
+    "content": "export function _cmp_no_bounds ( { jz , lt0 , mul , cmp } ) {\n\treturn function (a,b,c,d) {\n\t\tif (jz(b)) {\n\t\t\tif(lt0(a)) {\n\t\t\t\t// a/b = -Infinity\n\t\t\t\treturn jz(d) ? lt0(c) ?\n\t\t\t\t\t 0 : // b/d = -Infinity\n\t\t\t\t\t-1 : // b/d = Infinity\n\t\t\t\t\t-1 ; // b/d is finite\n\t\t\t}\n\t\t\telse {\n\t\t\t\t// a/b = Infinity\n\t\t\t\treturn jz(d) ? lt0(c) ?\n\t\t\t\t\t 1 : // b/d = -Infinity\n\t\t\t\t\t 0 : // b/d = Infinity\n\t\t\t\t\t 1 ; // b/d is finite\n\t\t\t}\n\t\t}\n\t\t// a/b is finite\n\t\tif (jz(d)) return lt0(c) ?\n\t\t\t 1 : // b/d = -Infinity\n\t\t\t-1 ; // b/d = Infinity\n\n\t\treturn cmp(mul(a,d), mul(b,c)) ;\n\t} ;\n}\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-rational/src/cmp_no_bounds.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 63,
+    "kind": "function",
+    "name": "_cmp_no_bounds",
+    "memberof": "src/cmp_no_bounds.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/cmp_no_bounds.js~_cmp_no_bounds",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/cmp_no_bounds.js",
+    "importStyle": "{_cmp_no_bounds}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"jz\": *, \"lt0\": *, \"mul\": *, \"cmp\": *}"
+        ],
+        "defaultRaw": {
+          "jz": null,
+          "lt0": null,
+          "mul": null,
+          "cmp": null
+        },
+        "defaultValue": "{\"jz\":null,\"lt0\":null,\"mul\":null,\"cmp\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "file",
+    "name": "src/decimals.js",
+    "content": "// TODO instead allocate enough space M < log_2(d) + d\n// for transient + repetend by multiplying x by b**M and do a single division ?\n// That may be too much space in most cases. Though necessary when d is prime.\n\nexport function _decimals ( { eq , muln , divmod } ) {\n\n\treturn function* ( b , d , n , hasrepetend , x ) {\n\n\t\t// Computes the length of the repetend of x/d (1 <= x < d) in base b\n\t\t// with transient part of size n.\n\n\t\twhile ( n-- ) {\n\n\t\t\tx = muln(x, b) ;\n\t\t\tconst [q, r] = divmod(x, d) ;\n\t\t\tyield q ;\n\t\t\tx = r ;\n\n\t\t}\n\n\t\tif ( !hasrepetend ) return ;\n\n\t\tconst first = x ;\n\n\t\tx = muln(x, b) ;\n\t\tconst [q, r] = divmod(x, d) ;\n\t\tyield q ;\n\t\tx = r ;\n\n\t\twhile (!eq(first, x)) {\n\n\t\t\tx = muln(x, b) ;\n\t\t\tconst [q, r] = divmod(x, d) ;\n\t\t\tyield q ;\n\t\t\tx = r ;\n\n\t\t}\n\n\t} ;\n\n}\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-rational/src/decimals.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 65,
+    "kind": "function",
+    "name": "_decimals",
+    "memberof": "src/decimals.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/decimals.js~_decimals",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/decimals.js",
+    "importStyle": "{_decimals}",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"eq\": *, \"muln\": *, \"divmod\": *}"
+        ],
+        "defaultRaw": {
+          "eq": null,
+          "muln": null,
+          "divmod": null
+        },
+        "defaultValue": "{\"eq\":null,\"muln\":null,\"divmod\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "file",
+    "name": "src/digits.js",
+    "content": "import { take } from '@aureooms/js-itertools' ;\nimport { _decimals } from './decimals' ;\nimport { _transient } from './transient' ;\n\nexport function _digits ( { jz , gt1 , eq , muln , divmodn , divmod , egcd , sgn , abs } ) {\n\n\tconst tr = _transient( { jz , gt1 , divmodn } ) ;\n\tconst dec = _decimals( { eq , muln , divmod } ) ;\n\n\treturn function ( b , bfactors , x , d ) {\n\n\t\tconst [ integral , r ] = divmod(abs(x), d) ;\n\n\t\tconst { u , v } = egcd(d, r) ;\n\n\t\tconst [ transient_length , has_repetend ] = tr( bfactors , v ) ;\n\n\t\tconst decimals = dec(b, v, transient_length, has_repetend , u) ;\n\n\t\tconst transient = [ ...take(decimals, transient_length) ] ;\n\n\t\tconst repetend = [ ...decimals ] ;\n\n\t\treturn { sign: sgn(x) , integral , transient , repetend } ;\n\n\t}\n\n}\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-rational/src/digits.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 67,
+    "kind": "function",
+    "name": "_digits",
+    "memberof": "src/digits.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/digits.js~_digits",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/digits.js",
+    "importStyle": "{_digits}",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"jz\": *, \"gt1\": *, \"eq\": *, \"muln\": *, \"divmodn\": *, \"divmod\": *, \"egcd\": *, \"sgn\": *, \"abs\": *}"
+        ],
+        "defaultRaw": {
+          "jz": null,
+          "gt1": null,
+          "eq": null,
+          "muln": null,
+          "divmodn": null,
+          "divmod": null,
+          "egcd": null,
+          "sgn": null,
+          "abs": null
+        },
+        "defaultValue": "{\"jz\":null,\"gt1\":null,\"eq\":null,\"muln\":null,\"divmodn\":null,\"divmod\":null,\"egcd\":null,\"sgn\":null,\"abs\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 68,
     "kind": "file",
     "name": "src/div.js",
     "content": "\n/**\n * Dummy div template.\n */\n\nexport function _div ( { mul } ) {\n\n\treturn function ( a0 , a1 , b0 , b1 ) {\n\n\t\tconst d = mul( a1 , b0 ) ;\n\t\tconst n = mul( a0 , b1 ) ;\n\n\t\treturn [ n , d ] ;\n\n\t} ;\n\n}\n\n",
@@ -669,7 +1025,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 53,
+    "__docId__": 69,
     "kind": "function",
     "name": "_div",
     "memberof": "src/div.js",
@@ -702,10 +1058,10 @@
     }
   },
   {
-    "__docId__": 54,
+    "__docId__": 70,
     "kind": "file",
     "name": "src/index.js",
-    "content": "export * from './add' ;\nexport * from './div' ;\nexport * from './mul' ;\nexport * from './sub' ;\nexport * from './cmp' ;\n",
+    "content": "export * from './add' ;\nexport * from './div' ;\nexport * from './mul' ;\nexport * from './sub' ;\nexport * from './pow' ;\nexport * from './cmp' ;\nexport * from './cmp_no_bounds' ;\nexport * from './simplify' ;\nexport * from './digits' ;\nexport * from './_stringify_digits' ;\nexport * from './_parse_fixed_point' ;\nexport * from './_parse_fraction' ;\n",
     "static": true,
     "longname": "/home/aureooms/dev/js/js-rational/src/index.js",
     "access": "public",
@@ -713,7 +1069,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 55,
+    "__docId__": 71,
     "kind": "file",
     "name": "src/mul.js",
     "content": "\n/**\n * Dummy mul template.\n */\n\nexport function _mul ( { mul } ) {\n\n\treturn function ( a0 , a1 , b0 , b1 ) {\n\n\t\tconst d = mul( a1 , b1 ) ;\n\t\tconst n = mul( a0 , b0 ) ;\n\n\t\treturn [ n , d ] ;\n\n\t} ;\n\n}\n\n",
@@ -724,7 +1080,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 56,
+    "__docId__": 72,
     "kind": "function",
     "name": "_mul",
     "memberof": "src/mul.js",
@@ -757,7 +1113,99 @@
     }
   },
   {
-    "__docId__": 57,
+    "__docId__": 73,
+    "kind": "file",
+    "name": "src/pow.js",
+    "content": "export function _pow ( { pown } ) {\n\n\treturn function ( a , b , n ) {\n\n\t\treturn n >= 0 ? [ pown(a,n) , pown(b,n) ] : [ pown(b,-n) , pown(a,-n) ] ;\n\n\t} ;\n\n}\n\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-rational/src/pow.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 74,
+    "kind": "function",
+    "name": "_pow",
+    "memberof": "src/pow.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/pow.js~_pow",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/pow.js",
+    "importStyle": "{_pow}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"pown\": *}"
+        ],
+        "defaultRaw": {
+          "pown": null
+        },
+        "defaultValue": "{\"pown\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "file",
+    "name": "src/simplify.js",
+    "content": "export function _simplify ( { egcd , sgn , neg } ) {\n\treturn function ( a , b ) {\n\t\tconst { u , v } = egcd(a , b) ;\n\t\treturn [\n\t\t\tsgn(v) === sgn(a) ? v : neg(v) ,\n\t\t\tsgn(u) === sgn(b) ? u : neg(u)\n\t\t] ;\n\t} ;\n}\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-rational/src/simplify.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 76,
+    "kind": "function",
+    "name": "_simplify",
+    "memberof": "src/simplify.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/simplify.js~_simplify",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/simplify.js",
+    "importStyle": "{_simplify}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"egcd\": *, \"sgn\": *, \"neg\": *}"
+        ],
+        "defaultRaw": {
+          "egcd": null,
+          "sgn": null,
+          "neg": null
+        },
+        "defaultValue": "{\"egcd\":null,\"sgn\":null,\"neg\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 77,
     "kind": "file",
     "name": "src/sub.js",
     "content": "\n/**\n * Dummy sub template.\n */\n\nexport function _sub ( { mul , sub } ) {\n\n\treturn function ( a0 , a1 , b0 , b1 ) {\n\n\t\tconst d = mul( a1 , b1 ) ;\n\t\tconst x = mul( a0 , b1 ) ;\n\t\tconst y = mul( b0 , a1 ) ;\n\t\tconst n = sub( x , y ) ;\n\n\t\treturn [ n , d ] ;\n\n\t} ;\n\n}\n\n",
@@ -768,7 +1216,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 58,
+    "__docId__": 78,
     "kind": "function",
     "name": "_sub",
     "memberof": "src/sub.js",
@@ -802,6 +1250,53 @@
     }
   },
   {
+    "__docId__": 79,
+    "kind": "file",
+    "name": "src/transient.js",
+    "content": "// credits https://github.com/aureooms-research/repeating-decimal\n\nexport function _transient ( { jz , gt1 , divmodn } ) {\n\n\treturn function ( bfactors ,  d ) {\n\n\t\t// Computes the length of the non repeating part in x / d\n\t\t// ( for any 1 <= x < d with x and d co-prime ) decimals in\n\t\t// base b whose prime factors are given. Returns tuple ( n , hasrepetend )\n\t\t// where n is the length of the non repeating part and hasrepetend\n\t\t// determines if 1 / d repeats or not.\n\n\t\tlet n = 0 ;\n\n\t\tfor ( const f of bfactors ) {\n\n\t\t\tlet m = 0 ;\n\n\t\t\twhile ( true ) {\n\n\t\t\t\tconst [ q , r ] = divmodn(d, f) ;\n\n\t\t\t\tif (!jz(r)) break ;\n\n\t\t\t\t++m ;\n\t\t\t\td = q ;\n\n\t\t\t}\n\n\t\t\tn = Math.max(n, m) ;\n\n\t\t}\n\n\t\treturn [ n , gt1(d) ] ;\n\n\t} ;\n\n}\n",
+    "static": true,
+    "longname": "/home/aureooms/dev/js/js-rational/src/transient.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "function",
+    "name": "_transient",
+    "memberof": "src/transient.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/transient.js~_transient",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-rational/src/transient.js",
+    "importStyle": "{_transient}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"jz\": *, \"gt1\": *, \"divmodn\": *}"
+        ],
+        "defaultRaw": {
+          "jz": null,
+          "gt1": null,
+          "divmodn": null
+        },
+        "defaultValue": "{\"jz\":null,\"gt1\":null,\"divmodn\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
     "kind": "index",
     "content": "[js-rational](http://aureooms.github.io/js-rational)\n==\n\n<img src=\"https://upload.wikimedia.org/wikipedia/commons/1/17/Number-systems.svg\" width=\"864\">\n\nRational numbers code bricks for JavaScript.\n\n```js\nlet [ a , b ] = add( 1 , 10 , 1 , 5 ) ;\na / b === 3 / 10 ; // true\n```\n\n[![License](https://img.shields.io/github/license/aureooms/js-rational.svg)](https://raw.githubusercontent.com/aureooms/js-rational/master/LICENSE)\n[![Version](https://img.shields.io/npm/v/@aureooms/js-rational.svg)](https://www.npmjs.org/package/@aureooms/js-rational)\n[![Build](https://img.shields.io/travis/aureooms/js-rational/master.svg)](https://travis-ci.org/aureooms/js-rational/branches)\n[![Dependencies](https://img.shields.io/david/aureooms/js-rational.svg)](https://david-dm.org/aureooms/js-rational)\n[![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-rational.svg)](https://david-dm.org/aureooms/js-rational?type=dev)\n[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-rational.svg)](https://github.com/aureooms/js-rational/issues)\n[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-rational.svg)](https://www.npmjs.org/package/@aureooms/js-rational)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/aureooms/js-rational.svg)](https://codeclimate.com/github/aureooms/js-rational/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-rational.svg)](https://codeclimate.com/github/aureooms/js-rational/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-rational/master.svg)](https://codecov.io/gh/aureooms/js-rational)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-rational.svg)](https://codeclimate.com/github/aureooms/js-rational/trends/technical_debt)\n[![Documentation](https://github.com/aureooms/js-rational/badge.svg)](https://github.com/aureooms/js-rational/source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-rational)](https://bundlephobia.com/result?p=@aureooms/js-rational)\n",
     "longname": "/home/aureooms/dev/js/js-rational/README.md",
@@ -811,7 +1306,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@aureooms/js-rational\",\n  \"description\": \"Rational numbers for JavaScript\",\n  \"version\": \"2.0.0\",\n  \"author\": \"Aurélien Ooms <aurelien.ooms@gmail.com>\",\n  \"ava\": {\n    \"require\": [\n      \"@babel/polyfill\",\n      \"@babel/register\"\n    ],\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"timeout\": \"1m\",\n    \"concurrency\": 8\n  },\n  \"babel\": {\n    \"presets\": [\n      \"@babel/preset-env\"\n    ],\n    \"env\": {\n      \"development\": {\n        \"sourceMaps\": \"inline\"\n      }\n    }\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-rational/issues\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-integer\": \"3.0.0\",\n    \"@babel/cli\": \"7.8.4\",\n    \"@babel/core\": \"7.9.6\",\n    \"@babel/polyfill\": \"7.8.7\",\n    \"@babel/preset-env\": \"7.9.6\",\n    \"@babel/register\": \"7.9.0\",\n    \"ava\": \"3.8.1\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"int\": \"0.2.0\",\n    \"np\": \"6.2.3\",\n    \"nyc\": \"15.0.1\"\n  },\n  \"files\": [\n    \"lib\"\n  ],\n  \"homepage\": \"https://github.com/aureooms/js-rational\",\n  \"keywords\": [\n    \"algorithm\",\n    \"arithmetic\",\n    \"bigdec\",\n    \"bigdecimal\",\n    \"complexity\",\n    \"exact\",\n    \"fractions\",\n    \"javascript\",\n    \"js\",\n    \"numbers\",\n    \"rational\"\n  ],\n  \"license\": \"AGPL-3.0\",\n  \"main\": \"lib/index.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/aureooms/js-rational.git\"\n  },\n  \"scripts\": {\n    \"build\": \"rm -rf lib && babel src -d lib\",\n    \"cover\": \"nyc --reporter=lcov npm test\",\n    \"esdoc\": \"esdoc\",\n    \"prepare\": \"npm run build\",\n    \"release\": \"np\",\n    \"test\": \"ava\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"@aureooms/js-rational\",\n  \"description\": \"Rational numbers for JavaScript\",\n  \"version\": \"3.0.1\",\n  \"author\": \"Aurélien Ooms <aurelien.ooms@gmail.com>\",\n  \"ava\": {\n    \"require\": [\n      \"@babel/polyfill\",\n      \"@babel/register\"\n    ],\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"timeout\": \"1m\",\n    \"concurrency\": 8\n  },\n  \"babel\": {\n    \"presets\": [\n      \"@babel/preset-env\"\n    ],\n    \"env\": {\n      \"development\": {\n        \"sourceMaps\": \"inline\"\n      }\n    }\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-rational/issues\"\n  },\n  \"dependencies\": {\n    \"@aureooms/js-itertools\": \"^4.0.0\"\n  },\n  \"devDependencies\": {\n    \"@aureooms/js-integer\": \"6.0.0\",\n    \"@aureooms/js-integer-big-endian\": \"^8.0.0\",\n    \"@aureooms/js-number\": \"3.1.0\",\n    \"@aureooms/js-prime\": \"4.0.0\",\n    \"@babel/cli\": \"7.8.4\",\n    \"@babel/core\": \"7.9.6\",\n    \"@babel/polyfill\": \"7.8.7\",\n    \"@babel/preset-env\": \"7.9.6\",\n    \"@babel/register\": \"7.9.0\",\n    \"ava\": \"3.8.1\",\n    \"bn.js\": \"5.1.1\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"int\": \"0.2.0\",\n    \"np\": \"6.2.3\",\n    \"nyc\": \"15.0.1\"\n  },\n  \"files\": [\n    \"lib\"\n  ],\n  \"homepage\": \"https://github.com/aureooms/js-rational\",\n  \"keywords\": [\n    \"algorithm\",\n    \"arithmetic\",\n    \"bigdec\",\n    \"bigdecimal\",\n    \"complexity\",\n    \"exact\",\n    \"fractions\",\n    \"javascript\",\n    \"js\",\n    \"numbers\",\n    \"rational\"\n  ],\n  \"license\": \"AGPL-3.0\",\n  \"main\": \"lib/index.js\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/aureooms/js-rational.git\"\n  },\n  \"scripts\": {\n    \"build\": \"rm -rf lib && babel src -d lib\",\n    \"cover\": \"nyc --reporter=lcov npm test\",\n    \"esdoc\": \"esdoc\",\n    \"prepare\": \"npm run build\",\n    \"release\": \"np\",\n    \"test\": \"ava\"\n  }\n}\n",
     "longname": "/home/aureooms/dev/js/js-rational/package.json",
     "name": "package.json",
     "static": true,

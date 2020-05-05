@@ -1,5 +1,23 @@
 window.esdocSearchIndex = [
   [
+    "@aureooms/js-rational/src/_constants.js~decimal_prefix",
+    "variable/index.html#static-variable-DECIMAL_PREFIX",
+    "<span>DECIMAL_PREFIX</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_constants.js</span>",
+    "variable"
+  ],
+  [
+    "@aureooms/js-rational/src/_constants.js~fraction_sep",
+    "variable/index.html#static-variable-FRACTION_SEP",
+    "<span>FRACTION_SEP</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_constants.js</span>",
+    "variable"
+  ],
+  [
+    "@aureooms/js-rational/src/_constants.js~repetend_prefix",
+    "variable/index.html#static-variable-REPETEND_PREFIX",
+    "<span>REPETEND_PREFIX</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_constants.js</span>",
+    "variable"
+  ],
+  [
     "@aureooms/js-rational/src/add.js~_add",
     "function/index.html#static-function-_add",
     "<span>_add</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/add.js</span>",
@@ -9,6 +27,24 @@ window.esdocSearchIndex = [
     "@aureooms/js-rational/src/cmp.js~_cmp",
     "function/index.html#static-function-_cmp",
     "<span>_cmp</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/cmp.js</span>",
+    "function"
+  ],
+  [
+    "@aureooms/js-rational/src/cmp_no_bounds.js~_cmp_no_bounds",
+    "function/index.html#static-function-_cmp_no_bounds",
+    "<span>_cmp_no_bounds</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/cmp_no_bounds.js</span>",
+    "function"
+  ],
+  [
+    "@aureooms/js-rational/src/decimals.js~_decimals",
+    "function/index.html#static-function-_decimals",
+    "<span>_decimals</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/decimals.js</span>",
+    "function"
+  ],
+  [
+    "@aureooms/js-rational/src/digits.js~_digits",
+    "function/index.html#static-function-_digits",
+    "<span>_digits</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/digits.js</span>",
     "function"
   ],
   [
@@ -24,9 +60,45 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@aureooms/js-rational/src/_parse_fixed_point.js~_parse_fixed_point",
+    "function/index.html#static-function-_parse_fixed_point",
+    "<span>_parse_fixed_point</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_parse_fixed_point.js</span>",
+    "function"
+  ],
+  [
+    "@aureooms/js-rational/src/_parse_fraction.js~_parse_fraction",
+    "function/index.html#static-function-_parse_fraction",
+    "<span>_parse_fraction</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_parse_fraction.js</span>",
+    "function"
+  ],
+  [
+    "@aureooms/js-rational/src/pow.js~_pow",
+    "function/index.html#static-function-_pow",
+    "<span>_pow</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/pow.js</span>",
+    "function"
+  ],
+  [
+    "@aureooms/js-rational/src/simplify.js~_simplify",
+    "function/index.html#static-function-_simplify",
+    "<span>_simplify</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/simplify.js</span>",
+    "function"
+  ],
+  [
+    "@aureooms/js-rational/src/_stringify_digits.js~_stringify_digits",
+    "function/index.html#static-function-_stringify_digits",
+    "<span>_stringify_digits</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_stringify_digits.js</span>",
+    "function"
+  ],
+  [
     "@aureooms/js-rational/src/sub.js~_sub",
     "function/index.html#static-function-_sub",
     "<span>_sub</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/sub.js</span>",
+    "function"
+  ],
+  [
+    "@aureooms/js-rational/src/transient.js~_transient",
+    "function/index.html#static-function-_transient",
+    "<span>_transient</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/transient.js</span>",
     "function"
   ],
   [
@@ -312,6 +384,30 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
+    "src/_constants.js",
+    "file/src/_constants.js.html",
+    "src/_constants.js",
+    "file"
+  ],
+  [
+    "src/_parse_fixed_point.js",
+    "file/src/_parse_fixed_point.js.html",
+    "src/_parse_fixed_point.js",
+    "file"
+  ],
+  [
+    "src/_parse_fraction.js",
+    "file/src/_parse_fraction.js.html",
+    "src/_parse_fraction.js",
+    "file"
+  ],
+  [
+    "src/_stringify_digits.js",
+    "file/src/_stringify_digits.js.html",
+    "src/_stringify_digits.js",
+    "file"
+  ],
+  [
     "src/add.js",
     "file/src/add.js.html",
     "src/add.js",
@@ -321,6 +417,24 @@ window.esdocSearchIndex = [
     "src/cmp.js",
     "file/src/cmp.js.html",
     "src/cmp.js",
+    "file"
+  ],
+  [
+    "src/cmp_no_bounds.js",
+    "file/src/cmp_no_bounds.js.html",
+    "src/cmp_no_bounds.js",
+    "file"
+  ],
+  [
+    "src/decimals.js",
+    "file/src/decimals.js.html",
+    "src/decimals.js",
+    "file"
+  ],
+  [
+    "src/digits.js",
+    "file/src/digits.js.html",
+    "src/digits.js",
     "file"
   ],
   [
@@ -342,9 +456,27 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/pow.js",
+    "file/src/pow.js.html",
+    "src/pow.js",
+    "file"
+  ],
+  [
+    "src/simplify.js",
+    "file/src/simplify.js.html",
+    "src/simplify.js",
+    "file"
+  ],
+  [
     "src/sub.js",
     "file/src/sub.js.html",
     "src/sub.js",
+    "file"
+  ],
+  [
+    "src/transient.js",
+    "file/src/transient.js.html",
+    "src/transient.js",
     "file"
   ]
 ]

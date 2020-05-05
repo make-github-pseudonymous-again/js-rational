@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/add.js | @aureooms/js-rational</title>
+  <title data-ice="title">src/transient.js | @aureooms/js-rational</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -50,27 +50,45 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/add.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
-/**
- * Dummy add template.
- */
+<div class="content" data-ice="content"><h1 data-ice="title">src/transient.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// credits https://github.com/aureooms-research/repeating-decimal
 
-export function _add ( { mul , add } ) {
+export function _transient ( { jz , gt1 , divmodn } ) {
 
-	return function ( a0 , a1 , b0 , b1 ) {
+	return function ( bfactors ,  d ) {
 
-		const d = mul( a1 , b1 ) ;
-		const x = mul( a0 , b1 ) ;
-		const y = mul( b0 , a1 ) ;
-		const n = add( x , y ) ;
+		// Computes the length of the non repeating part in x / d
+		// ( for any 1 &lt;= x &lt; d with x and d co-prime ) decimals in
+		// base b whose prime factors are given. Returns tuple ( n , hasrepetend )
+		// where n is the length of the non repeating part and hasrepetend
+		// determines if 1 / d repeats or not.
 
-		return [ n , d ] ;
+		let n = 0 ;
+
+		for ( const f of bfactors ) {
+
+			let m = 0 ;
+
+			while ( true ) {
+
+				const [ q , r ] = divmodn(d, f) ;
+
+				if (!jz(r)) break ;
+
+				++m ;
+				d = q ;
+
+			}
+
+			n = Math.max(n, m) ;
+
+		}
+
+		return [ n , gt1(d) ] ;
 
 	} ;
 
 }
-
 </code></pre>
 
 </div>

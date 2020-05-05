@@ -29,11 +29,23 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_add">_add</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_parse_fixed_point">_parse_fixed_point</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_parse_fraction">_parse_fraction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_stringify_digits">_stringify_digits</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_add">_add</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_cmp">_cmp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_cmp_no_bounds">_cmp_no_bounds</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_decimals">_decimals</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_digits">_digits</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_div">_div</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_mul">_mul</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_pow">_pow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_simplify">_simplify</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_sub">_sub</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_transient">_transient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DECIMAL_PREFIX">DECIMAL_PREFIX</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FRACTION_SEP">FRACTION_SEP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-REPETEND_PREFIX">REPETEND_PREFIX</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -86,7 +98,91 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_cmp">_cmp</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;jz&quot;: <span>*</span>, &quot;lt0&quot;: <span>*</span>, &quot;lt&quot;: <span>*</span>, &quot;neg&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>}): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_cmp">_cmp</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;jz&quot;: <span>*</span>, &quot;lt0&quot;: <span>*</span>, &quot;cmp&quot;: <span>*</span>, &quot;neg&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>}): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_cmp_no_bounds">_cmp_no_bounds</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;jz&quot;: <span>*</span>, &quot;lt0&quot;: <span>*</span>, &quot;mul&quot;: <span>*</span>, &quot;cmp&quot;: <span>*</span>}): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_decimals">_decimals</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;eq&quot;: <span>*</span>, &quot;muln&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>}): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_digits">_digits</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;jz&quot;: <span>*</span>, &quot;gt1&quot;: <span>*</span>, &quot;eq&quot;: <span>*</span>, &quot;muln&quot;: <span>*</span>, &quot;divmodn&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>, &quot;egcd&quot;: <span>*</span>, &quot;sgn&quot;: <span>*</span>, &quot;abs&quot;: <span>*</span>}): <span>*</span></span>
         </p>
       </div>
       <div>
@@ -172,6 +268,146 @@
           
           
           
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_parse_fixed_point">_parse_fixed_point</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;_chr&quot;: <span>*</span>, &quot;reg&quot;: <span>*</span>, &quot;sub&quot;: <span>*</span>}): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_parse_fraction">_parse_fraction</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;reg&quot;: <span>*</span>}): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_pow">_pow</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;pown&quot;: <span>*</span>}): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_simplify">_simplify</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;egcd&quot;: <span>*</span>, &quot;sgn&quot;: <span>*</span>, &quot;neg&quot;: <span>*</span>}): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_stringify_digits">_stringify_digits</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;str&quot;: <span>*</span>}): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
           <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_sub">_sub</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;mul&quot;: <span>*</span>, &quot;sub&quot;: <span>*</span>}): <span>*</span></span>
         </p>
       </div>
@@ -180,6 +416,34 @@
         
         <div data-ice="description"><p>Dummy sub template.</p>
 </div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_transient">_transient</a></span></span><span class="code" data-ice="signature">(objectPattern: {&quot;jz&quot;: <span>*</span>, &quot;gt1&quot;: <span>*</span>, &quot;divmodn&quot;: <span>*</span>}): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
       </div>
     </td>
     <td>
@@ -272,7 +536,7 @@
     
     
     
-    <span class="code" data-ice="name">_cmp</span><span class="code" data-ice="signature">(objectPattern: {&quot;jz&quot;: <span>*</span>, &quot;lt0&quot;: <span>*</span>, &quot;lt&quot;: <span>*</span>, &quot;neg&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="code" data-ice="name">_cmp</span><span class="code" data-ice="signature">(objectPattern: {&quot;jz&quot;: <span>*</span>, &quot;lt0&quot;: <span>*</span>, &quot;cmp&quot;: <span>*</span>, &quot;neg&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>}): <span>*</span></span>
     <span class="right-info">
       
       
@@ -297,8 +561,221 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">objectPattern</td>
-      <td data-ice="type" class="code">{&quot;jz&quot;: <span>*</span>, &quot;lt0&quot;: <span>*</span>, &quot;lt&quot;: <span>*</span>, &quot;neg&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>}</td>
-      <td data-ice="appendix"><ul><li>default: {&quot;jz&quot;:null,&quot;lt0&quot;:null,&quot;lt&quot;:null,&quot;neg&quot;:null,&quot;divmod&quot;:null}</li></ul></td>
+      <td data-ice="type" class="code">{&quot;jz&quot;: <span>*</span>, &quot;lt0&quot;: <span>*</span>, &quot;cmp&quot;: <span>*</span>, &quot;neg&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>}</td>
+      <td data-ice="appendix"><ul><li>default: {&quot;jz&quot;:null,&quot;lt0&quot;:null,&quot;cmp&quot;:null,&quot;neg&quot;:null,&quot;divmod&quot;:null}</li></ul></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-_cmp_no_bounds">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">_cmp_no_bounds</span><span class="code" data-ice="signature">(objectPattern: {&quot;jz&quot;: <span>*</span>, &quot;lt0&quot;: <span>*</span>, &quot;mul&quot;: <span>*</span>, &quot;cmp&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/cmp_no_bounds.js.html#lineNumber1">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {_cmp_no_bounds} from &apos;<span><a href="file/src/cmp_no_bounds.js.html#lineNumber1">@aureooms/js-rational/src/cmp_no_bounds.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">objectPattern</td>
+      <td data-ice="type" class="code">{&quot;jz&quot;: <span>*</span>, &quot;lt0&quot;: <span>*</span>, &quot;mul&quot;: <span>*</span>, &quot;cmp&quot;: <span>*</span>}</td>
+      <td data-ice="appendix"><ul><li>default: {&quot;jz&quot;:null,&quot;lt0&quot;:null,&quot;mul&quot;:null,&quot;cmp&quot;:null}</li></ul></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-_decimals">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">_decimals</span><span class="code" data-ice="signature">(objectPattern: {&quot;eq&quot;: <span>*</span>, &quot;muln&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/decimals.js.html#lineNumber5">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {_decimals} from &apos;<span><a href="file/src/decimals.js.html#lineNumber5">@aureooms/js-rational/src/decimals.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">objectPattern</td>
+      <td data-ice="type" class="code">{&quot;eq&quot;: <span>*</span>, &quot;muln&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>}</td>
+      <td data-ice="appendix"><ul><li>default: {&quot;eq&quot;:null,&quot;muln&quot;:null,&quot;divmod&quot;:null}</li></ul></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-_digits">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">_digits</span><span class="code" data-ice="signature">(objectPattern: {&quot;jz&quot;: <span>*</span>, &quot;gt1&quot;: <span>*</span>, &quot;eq&quot;: <span>*</span>, &quot;muln&quot;: <span>*</span>, &quot;divmodn&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>, &quot;egcd&quot;: <span>*</span>, &quot;sgn&quot;: <span>*</span>, &quot;abs&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/digits.js.html#lineNumber5">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {_digits} from &apos;<span><a href="file/src/digits.js.html#lineNumber5">@aureooms/js-rational/src/digits.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">objectPattern</td>
+      <td data-ice="type" class="code">{&quot;jz&quot;: <span>*</span>, &quot;gt1&quot;: <span>*</span>, &quot;eq&quot;: <span>*</span>, &quot;muln&quot;: <span>*</span>, &quot;divmodn&quot;: <span>*</span>, &quot;divmod&quot;: <span>*</span>, &quot;egcd&quot;: <span>*</span>, &quot;sgn&quot;: <span>*</span>, &quot;abs&quot;: <span>*</span>}</td>
+      <td data-ice="appendix"><ul><li>default: {&quot;jz&quot;:null,&quot;gt1&quot;:null,&quot;eq&quot;:null,&quot;muln&quot;:null,&quot;divmodn&quot;:null,&quot;divmod&quot;:null,&quot;egcd&quot;:null,&quot;sgn&quot;:null,&quot;abs&quot;:null}</li></ul></td>
       <td data-ice="description"></td>
     </tr>
 </tbody>
@@ -480,6 +957,361 @@
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-_parse_fixed_point">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">_parse_fixed_point</span><span class="code" data-ice="signature">(objectPattern: {&quot;_chr&quot;: <span>*</span>, &quot;reg&quot;: <span>*</span>, &quot;sub&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/_parse_fixed_point.js.html#lineNumber4">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {_parse_fixed_point} from &apos;<span><a href="file/src/_parse_fixed_point.js.html#lineNumber4">@aureooms/js-rational/src/_parse_fixed_point.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">objectPattern</td>
+      <td data-ice="type" class="code">{&quot;_chr&quot;: <span>*</span>, &quot;reg&quot;: <span>*</span>, &quot;sub&quot;: <span>*</span>}</td>
+      <td data-ice="appendix"><ul><li>default: {&quot;_chr&quot;:null,&quot;reg&quot;:null,&quot;sub&quot;:null}</li></ul></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-_parse_fraction">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">_parse_fraction</span><span class="code" data-ice="signature">(objectPattern: {&quot;reg&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/_parse_fraction.js.html#lineNumber4">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {_parse_fraction} from &apos;<span><a href="file/src/_parse_fraction.js.html#lineNumber4">@aureooms/js-rational/src/_parse_fraction.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">objectPattern</td>
+      <td data-ice="type" class="code">{&quot;reg&quot;: <span>*</span>}</td>
+      <td data-ice="appendix"><ul><li>default: {&quot;reg&quot;:null}</li></ul></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-_pow">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">_pow</span><span class="code" data-ice="signature">(objectPattern: {&quot;pown&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/pow.js.html#lineNumber1">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {_pow} from &apos;<span><a href="file/src/pow.js.html#lineNumber1">@aureooms/js-rational/src/pow.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">objectPattern</td>
+      <td data-ice="type" class="code">{&quot;pown&quot;: <span>*</span>}</td>
+      <td data-ice="appendix"><ul><li>default: {&quot;pown&quot;:null}</li></ul></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-_simplify">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">_simplify</span><span class="code" data-ice="signature">(objectPattern: {&quot;egcd&quot;: <span>*</span>, &quot;sgn&quot;: <span>*</span>, &quot;neg&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/simplify.js.html#lineNumber1">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {_simplify} from &apos;<span><a href="file/src/simplify.js.html#lineNumber1">@aureooms/js-rational/src/simplify.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">objectPattern</td>
+      <td data-ice="type" class="code">{&quot;egcd&quot;: <span>*</span>, &quot;sgn&quot;: <span>*</span>, &quot;neg&quot;: <span>*</span>}</td>
+      <td data-ice="appendix"><ul><li>default: {&quot;egcd&quot;:null,&quot;sgn&quot;:null,&quot;neg&quot;:null}</li></ul></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-_stringify_digits">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">_stringify_digits</span><span class="code" data-ice="signature">(objectPattern: {&quot;str&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/_stringify_digits.js.html#lineNumber1">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {_stringify_digits} from &apos;<span><a href="file/src/_stringify_digits.js.html#lineNumber1">@aureooms/js-rational/src/_stringify_digits.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">objectPattern</td>
+      <td data-ice="type" class="code">{&quot;str&quot;: <span>*</span>}</td>
+      <td data-ice="appendix"><ul><li>default: {&quot;str&quot;:null}</li></ul></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-function-_sub">
     <span class="access" data-ice="access">private</span>
     
@@ -515,6 +1347,77 @@
       <td data-ice="name" class="code" data-depth="0">objectPattern</td>
       <td data-ice="type" class="code">{&quot;mul&quot;: <span>*</span>, &quot;sub&quot;: <span>*</span>}</td>
       <td data-ice="appendix"><ul><li>default: {&quot;mul&quot;:null,&quot;sub&quot;:null}</li></ul></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-_transient">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">_transient</span><span class="code" data-ice="signature">(objectPattern: {&quot;jz&quot;: <span>*</span>, &quot;gt1&quot;: <span>*</span>, &quot;divmodn&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/transient.js.html#lineNumber3">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {_transient} from &apos;<span><a href="file/src/transient.js.html#lineNumber3">@aureooms/js-rational/src/transient.js</a></span>&apos;</code></pre></div>
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">objectPattern</td>
+      <td data-ice="type" class="code">{&quot;jz&quot;: <span>*</span>, &quot;gt1&quot;: <span>*</span>, &quot;divmodn&quot;: <span>*</span>}</td>
+      <td data-ice="appendix"><ul><li>default: {&quot;jz&quot;:null,&quot;gt1&quot;:null,&quot;divmodn&quot;:null}</li></ul></td>
       <td data-ice="description"></td>
     </tr>
 </tbody>

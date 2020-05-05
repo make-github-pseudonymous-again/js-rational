@@ -29,17 +29,29 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_add">_add</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_parse_fixed_point">_parse_fixed_point</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_parse_fraction">_parse_fraction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_stringify_digits">_stringify_digits</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_add">_add</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_cmp">_cmp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_cmp_no_bounds">_cmp_no_bounds</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_decimals">_decimals</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_digits">_digits</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_div">_div</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_mul">_mul</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_pow">_pow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_simplify">_simplify</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_sub">_sub</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_transient">_transient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DECIMAL_PREFIX">DECIMAL_PREFIX</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FRACTION_SEP">FRACTION_SEP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-REPETEND_PREFIX">REPETEND_PREFIX</a></span></span></li>
 </ul>
 </div>
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/cmp.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export function _cmp ( { jz , lt0 , lt , neg , divmod } ) {
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export function _cmp ( { jz , lt0 , cmp , neg , divmod } ) {
 
 	const compare_positive_fractions = function (a,b,c,d) {
 		if (jz(b)) {
@@ -49,12 +61,10 @@
 		if (jz(d)) return -1;
 		const [ q1 , r1 ] = divmod(a, b) ;
 		const [ q2 , r2 ] = divmod(c, d) ;
-		if (lt(q1,q2)) return -1;
-		if (lt(q2,q1)) return 1;
-		return compare_positive_fractions(d,r2,b,r1);
+		return cmp(q1, q2) || compare_positive_fractions(d,r2,b,r1);
 	}
 
-	const cmp = function (a,b,c,d) {
+	return function (a,b,c,d) {
 		if (lt0(b)) { b = neg(b); a = neg(a); }
 		if (lt0(d)) { d = neg(d); c = neg(c); }
 		if (lt0(a)) {
@@ -64,8 +74,6 @@
 		if (lt0(c)) return 1;
 		return compare_positive_fractions(a,b,c,d);
 	}
-
-	return cmp ;
 
 }
 </code></pre>

@@ -1,8 +1,38 @@
 {
-  "coverage": "80%",
-  "expectCount": 5,
+  "coverage": "23.52%",
+  "expectCount": 17,
   "actualCount": 4,
   "files": {
+    "src/_constants.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        2,
+        3,
+        4
+      ]
+    },
+    "src/_parse_fixed_point.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/_parse_fraction.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/_stringify_digits.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
     "src/add.js": {
       "expectCount": 1,
       "actualCount": 1,
@@ -15,6 +45,27 @@
         1
       ]
     },
+    "src/cmp_no_bounds.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/decimals.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "src/digits.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
     "src/div.js": {
       "expectCount": 1,
       "actualCount": 1,
@@ -25,10 +76,31 @@
       "actualCount": 1,
       "undocumentLines": []
     },
+    "src/pow.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/simplify.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
     "src/sub.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
+    },
+    "src/transient.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
     }
   }
 }

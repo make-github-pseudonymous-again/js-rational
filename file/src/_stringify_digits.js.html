@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/add.js | @aureooms/js-rational</title>
+  <title data-ice="title">src/_stringify_digits.js | @aureooms/js-rational</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -50,27 +50,30 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/add.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
-/**
- * Dummy add template.
- */
+<div class="content" data-ice="content"><h1 data-ice="title">src/_stringify_digits.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export function _stringify_digits ( { str } ) {
 
-export function _add ( { mul , add } ) {
+	return function ( base , { sign , integral , transient , repetend } ) {
 
-	return function ( a0 , a1 , b0 , b1 ) {
+		const toStr = x =&gt; str(x, base);
 
-		const d = mul( a1 , b1 ) ;
-		const x = mul( a0 , b1 ) ;
-		const y = mul( b0 , a1 ) ;
-		const n = add( x , y ) ;
+		let repr = &apos;&apos; ;
 
-		return [ n , d ] ;
+		if (sign &lt; 0) repr += &apos;-&apos; ;
+
+		repr += toStr(integral) ;
+
+		if (transient.length || repetend.length) repr += &apos;.&apos; ;
+		repr += transient.map(toStr).join(&apos;&apos;) ;
+
+		if (repetend.length) repr += &apos;|&apos; ;
+		repr += repetend.map(toStr).join(&apos;&apos;) ;
+
+		return repr ;
 
 	} ;
 
 }
-
 </code></pre>
 
 </div>
