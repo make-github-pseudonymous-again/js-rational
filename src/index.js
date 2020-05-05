@@ -8,3 +8,5 @@ export * from './cmp_no_bounds' ;
 export * from './simplify' ;
 export * from './digits' ;
 export * from './_stringify_digits' ;
+export * from './_parse_fixed_point' ;
+export * from './_parse_fraction' ;

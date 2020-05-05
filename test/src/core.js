@@ -4,7 +4,8 @@ import { $2, iadd1, eq0, gt1, divmod } from "@aureooms/js-number" ;
 import {
 	_add , _sub , _mul , _div , _pow ,
 	_cmp , _cmp_no_bounds ,
-	_simplify , _digits , _stringify_digits
+	_simplify , _digits , _stringify_digits ,
+	_parse_fraction , _parse_fixed_point
 } from '../../src';
 
 const GOOGOL = '10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000' ;
@@ -70,8 +71,22 @@ function unary ( t , alu , [ [ _x , _y , factory ] , a , b , e ] ) {
 
 }
 
-unary.title = ( _ , alu , [ [ name , impl ] , a , b , e ] ) => {
-	return `${name}<${impl.name}, ${alu.name}> ${name}(${a}/${b}) = ${e}` ;
+unary.title = ( _ , alu , [ [ name , op , impl ] , a , b , e ] ) => {
+	return `${name}<${impl.name}, ${alu.name}> ${name}(${a}/${b}) ${op} ${e}` ;
+} ;
+
+function macro_parse ( t , alu , [ [ _x , _y , factory ] , base , s , e ] ) {
+
+	const apply = factory( alu );
+
+	const z = apply(base, s)
+
+	t.is(e, z) ;
+
+}
+
+macro_parse.title = ( _ , alu , [ [ name , op , impl ] , base , s , e ] ) => {
+	return `${name}<${impl.name}, ${alu.name}> ${name}(${base},${s}) ${op} ${e}` ;
 } ;
 
 const add = [ 'add' , '+' , [ _add ] , binary ] ;
@@ -95,9 +110,27 @@ const stringify_n = b => alu => {
 	return ( x , d ) => _stringify_digits( alu.str , b , digits(x, d) ) ;
 } ;
 
+
 const stringify_10 = [ 'stringify_10' , '=' , [ stringify_n(10) ] , unary , alu => alu.egcd ] ;
 const stringify_2 = [ 'stringify_2' , '=' , [ stringify_n(2) ] , unary , alu => alu.egcd ] ;
 const stringify_19 = [ 'stringify_19' , '=' , [ stringify_n(19) ] , unary , alu => alu.egcd ] ;
+
+const parse_fraction = [ 'parse_fraction' , '=' , [
+	alu => {
+		const repr = x => `${alu.str(x[0])}/${alu.str(x[1])}` ;
+		const simp = _simplify(alu) ;
+		const parse = _parse_fraction(alu);
+		return (base, s) => repr(simp(...parse(base, s))) ;
+	}
+] , macro_parse , alu => alu.anybase ] ;
+const parse_fixed_point = [ 'parse_fixed_point' , '=' , [
+	alu => {
+		const repr = x => `${alu.str(x[0])}/${alu.str(x[1])}` ;
+		const simp = _simplify(alu) ;
+		const parse = _parse_fixed_point(alu);
+		return (base, s) => repr(simp(...parse(base, s))) ;
+	}
+] , macro_parse , alu => alu.egcd && alu.anybase ] ;
 
 const PARAMS = [
 
@@ -213,6 +246,15 @@ const PARAMS = [
 	[ stringify_19 , '1' , '2' , '0.|9' ] , // HAHA
 
 	[ stringify_19 , '14' , '13', '1.|18ebd2ha475g'] , // HOHO
+
+	[ parse_fraction , 10 , '1/2' , '1/2' ] ,
+	[ parse_fraction , 10 , '10/20' , '1/2' ] ,
+
+	[ parse_fixed_point , 19 , '1.|18ebd2ha475g' , '14/13' ] ,
+	[ parse_fixed_point , 2 , '0.1' , '1/2' ] ,
+	[ parse_fixed_point , 10 , '3.|1415929203539823008849557522123893805309734513274336283185840707964601769911504424778761061946902654867256637168' , '355/113' ] ,
+
+	[ parse_fixed_point , 10 , '0.0|2' , '1/45' ] ,
 
 ] ;
 
