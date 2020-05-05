@@ -2,9 +2,9 @@
 // for transient + repetend by multiplying x by b**M and do a single division ?
 // That may be too much space in most cases. Though necessary when d is prime.
 
-export function _decimals ( { b , eq , muln , divmod } ) {
+export function _decimals ( { eq , muln , divmod } ) {
 
-	return function* ( d , n , hasrepetend , x ) {
+	return function* ( b , d , n , hasrepetend , x ) {
 
 		// Computes the length of the repetend of x/d (1 <= x < d) in base b
 		// with transient part of size n.

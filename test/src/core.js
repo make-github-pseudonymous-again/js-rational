@@ -105,9 +105,10 @@ const simplify = [ 'simplify' , '=' , [
 
 
 const stringify_n = b => alu => {
-	const bfactors = ufactors( b ) ;
-	const digits = _digits({ b , bfactors , ...alu }) ;
-	return ( x , d ) => _stringify_digits( alu.str , b , digits(x, d) ) ;
+	const bfactors = ufactors(b) ;
+	const digits = _digits(alu) ;
+	const stringify_digits = _stringify_digits(alu) ;
+	return ( x , d ) => stringify_digits( b , digits(b, bfactors, x, d) ) ;
 } ;
 
 

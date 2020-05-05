@@ -1,19 +1,23 @@
-export function _stringify_digits ( str , base , { sign , left , transient , repetend } ) {
+export function _stringify_digits ( { str } ) {
 
-	const toStr = x => str(x, base);
+	return function ( base , { sign , integral , transient , repetend } ) {
 
-	let repr = '' ;
+		const toStr = x => str(x, base);
 
-	if (sign < 0) repr += '-' ;
+		let repr = '' ;
 
-	repr += toStr(left) ;
+		if (sign < 0) repr += '-' ;
 
-	if (transient.length || repetend.length) repr += '.' ;
-	repr += transient.map(toStr).join('') ;
+		repr += toStr(integral) ;
 
-	if (repetend.length) repr += '|' ;
-	repr += repetend.map(toStr).join('') ;
+		if (transient.length || repetend.length) repr += '.' ;
+		repr += transient.map(toStr).join('') ;
 
-	return repr ;
+		if (repetend.length) repr += '|' ;
+		repr += repetend.map(toStr).join('') ;
+
+		return repr ;
+
+	} ;
 
 }

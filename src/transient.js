@@ -1,8 +1,8 @@
 // credits https://github.com/aureooms-research/repeating-decimal
 
-export function _transient ( { bfactors , jz , gt1 , divmodn } ) {
+export function _transient ( { jz , gt1 , divmodn } ) {
 
-	return function ( d ) {
+	return function ( bfactors ,  d ) {
 
 		// Computes the length of the non repeating part in x / d
 		// ( for any 1 <= x < d with x and d co-prime ) decimals in
