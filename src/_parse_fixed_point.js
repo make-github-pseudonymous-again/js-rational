@@ -18,7 +18,7 @@ export function _parse_fixed_point ( { _chr , reg , sub } ) {
 			(new Array(transient.length+1)).join( _chr(0) ) ;
 
 		const _big = _integral + transient + _repetend ;
-		const _small = _integral + transient ;
+		const _small = ( _integral + transient ) || '0' ;
 
 		const _bign = reg(_big, base) ;
 		const _smalln = reg(_small, base) ;
