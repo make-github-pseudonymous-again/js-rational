@@ -14,10 +14,10 @@
   resolved "https://registry.yarnpkg.com/@aureooms/js-error/-/js-error-4.0.0.tgz#cea0a145f5290f443911b3d1890d7254a18eeb9b"
   integrity sha512-omwmz82cPxqRnorZ8tqeIcPj1QcJnCsMiVYcwOh/QfUXhJ+DmiBPgWOm5WWAQvQzYVKe0/k7+s2ie+UoRJagjA==
 
-"@aureooms/js-integer-big-endian@8.0.3":
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-integer-big-endian/-/js-integer-big-endian-8.0.3.tgz#ae398d605be8a2f4f93bc5742984ae5a67251292"
-  integrity sha512-MFzaXGxJeBnGR2GFyRlwAbK7pf3oL9Du5I0VRyAS0F4R8XTh2d0EB+ztQvuhOAJdMsUdmZ8rDTahfm4sl3epXQ==
+"@aureooms/js-integer-big-endian@8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@aureooms/js-integer-big-endian/-/js-integer-big-endian-8.1.0.tgz#478282c4089abff81f0da4da7545e5304c82e33c"
+  integrity sha512-8iWCokdNKCrhiuMV3TQrJANNGjpfvJRzO0smS7NXXPmi59/zbnb/piq7TvnxUaFvFWkF8CLTAoVOq39xIdVf2w==
 
 "@aureooms/js-integer-big-endian@^8.0.0":
   version "8.0.0"
