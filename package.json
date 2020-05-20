@@ -41,7 +41,7 @@
     "@babel/preset-env": "7.9.6",
     "@babel/register": "7.9.0",
     "ava": "3.8.2",
-    "bn.js": "5.1.1",
+    "bn.js": "5.1.2",
     "coveralls": "3.1.0",
     "esdoc": "1.1.0",
     "esdoc-inject-script-plugin": "1.0.0",
