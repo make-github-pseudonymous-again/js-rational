@@ -1,7 +1,7 @@
 [@aureooms/js-rational](http://aureooms.github.io/js-rational)
 ==
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Number-systems.svg" width="864">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Cake_fractions.svg" width="864">
 
 Fractions for JavaScript.
 See
