@@ -3,7 +3,14 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Number-systems.svg" width="864">
 
-Rational numbers code bricks for JavaScript.
+Fractions for JavaScript.
+See
+[@aureooms/js-rational-field](https://aureooms.github.io/js-rational-field)
+for an implementation of the rational field ℚ base on this library
+and
+[@aureooms/js-integer](https://aureooms.github.io/js-integer).
+See [docs](https://aureooms.github.io/js-rational).
+Parent is [@aureooms/js-algorithms](https://github.com/aureooms/js-algorithms).
 
 ```js
 let [ a , b ] = add( 1 , 10 , 1 , 5 ) ;
