@@ -1,4 +1,4 @@
-[js-rational](http://aureooms.github.io/js-rational)
+[@aureooms/js-rational](http://aureooms.github.io/js-rational)
 ==
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Number-systems.svg" width="864">
@@ -22,5 +22,5 @@ a / b === 3 / 10 ; // true
 [![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-rational.svg)](https://codeclimate.com/github/aureooms/js-rational/trends/churn)
 [![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-rational/master.svg)](https://codecov.io/gh/aureooms/js-rational)
 [![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-rational.svg)](https://codeclimate.com/github/aureooms/js-rational/trends/technical_debt)
-[![Documentation](https://github.com/aureooms/js-rational/badge.svg)](https://github.com/aureooms/js-rational/source.html)
+[![Documentation](https://aureooms.github.io/js-rational/badge.svg)](https://aureooms.github.io/js-rational/source.html)
 [![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-rational)](https://bundlephobia.com/result?p=@aureooms/js-rational)
