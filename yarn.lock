@@ -14,23 +14,18 @@
   resolved "https://registry.yarnpkg.com/@aureooms/js-error/-/js-error-4.0.0.tgz#cea0a145f5290f443911b3d1890d7254a18eeb9b"
   integrity sha512-omwmz82cPxqRnorZ8tqeIcPj1QcJnCsMiVYcwOh/QfUXhJ+DmiBPgWOm5WWAQvQzYVKe0/k7+s2ie+UoRJagjA==
 
-"@aureooms/js-integer-big-endian@10.0.0":
+"@aureooms/js-integer-big-endian@10.0.0", "@aureooms/js-integer-big-endian@^10.0.0":
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/@aureooms/js-integer-big-endian/-/js-integer-big-endian-10.0.0.tgz#e3e46af63e7b900822abba3f216e64c812aa6532"
   integrity sha512-Fa8v0V40FDZ09j/UP+c0x+Xd0Un3zuBc1K0T8EIZI4mAXFq7wDcd2mRCmR/djcKCcfPIR1Wgm0ucltNR6snm1g==
 
-"@aureooms/js-integer-big-endian@^9.0.2":
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-integer-big-endian/-/js-integer-big-endian-9.0.2.tgz#4747d9d1586d66d11ec21c2cd3d81a68680e0717"
-  integrity sha512-9rlrO1UaJ6X5CxK1YxIf74u2XWbh5TX0XA9lx5RIu8HgCrhQDO3PKhZl6oOSSsY2/s8SWd4/RAd4IigziPvYng==
-
-"@aureooms/js-integer@8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-integer/-/js-integer-8.0.0.tgz#0bd33dded6fcc858f0c748df13bdd2c3913a5b4d"
-  integrity sha512-cuLG3K6bbE3CrMNW1OJiEq+rWWRMb9Dukc/DW1XftnuXkQSek5R053k952ceA8kF1IgDrxgG8DkZNZ7K/Se14Q==
+"@aureooms/js-integer@9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@aureooms/js-integer/-/js-integer-9.0.0.tgz#6680ab814ec124e4a33895852c57dbb23e206241"
+  integrity sha512-YxRhWYZk+vjPnam6sipgEvMFlfdr/9RRvQxKYkfxg852NdlDKB8c5NEmOYson4bqiu+FUJU+S5vkvxCfT5wn2A==
   dependencies:
     "@aureooms/js-error" "^4.0.0"
-    "@aureooms/js-integer-big-endian" "^9.0.2"
+    "@aureooms/js-integer-big-endian" "^10.0.0"
 
 "@aureooms/js-itertools@^4.0.0":
   version "4.0.0"
