@@ -28,7 +28,7 @@
     "url": "https://github.com/aureooms/js-rational/issues"
   },
   "dependencies": {
-    "@aureooms/js-itertools": "^4.0.0"
+    "@aureooms/js-itertools": "^4.0.1"
   },
   "devDependencies": {
     "@aureooms/js-integer": "9.0.0",
