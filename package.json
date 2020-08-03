@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@aureooms/js-integer": "9.0.0",
-    "@aureooms/js-integer-big-endian": "10.0.0",
+    "@aureooms/js-integer-big-endian": "10.1.0",
     "@aureooms/js-number": "3.1.0",
     "@aureooms/js-prime": "4.0.0",
     "@babel/cli": "7.10.5",
