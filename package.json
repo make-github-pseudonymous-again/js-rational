@@ -133,7 +133,8 @@
     "esdoc": "esdoc",
     "prepare": "npm run build",
     "release": "np",
-    "test": "ava"
+    "test": "ava",
+    "lint": "true"
   },
   "sideEffects": false
 }
