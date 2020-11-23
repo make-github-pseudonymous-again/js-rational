@@ -1,4 +1,4 @@
-[@aureooms/js-rational](http://aureooms.github.io/js-rational)
+[@aureooms/js-rational](https://aureooms.github.io/js-rational)
 ==
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Cake_fractions.svg" width="864">
