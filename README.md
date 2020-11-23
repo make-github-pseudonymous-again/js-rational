@@ -1,7 +1,17 @@
-[@aureooms/js-rational](https://aureooms.github.io/js-rational)
+:pizza: [@aureooms/js-rational](https://aureooms.github.io/js-rational)
 ==
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Cake_fractions.svg" width="864">
+<p align="center">
+<a href="https://commons.wikimedia.org/wiki/File:Cake_fractions.svg">
+<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Cake_fractions.svg" width="500">
+</a><br/>
+<a href="https://commons.wikimedia.org/w/index.php?title=User:Acdx">
+User:Acdx
+</a>
+/
+<a href="https://en.wikipedia.org/wiki/Public_domain">Public Domain</a>
+</p>
+
 
 Fractions for JavaScript.
 See
