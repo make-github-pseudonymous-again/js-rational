@@ -9,28 +9,28 @@
   dependencies:
     "@aureooms/js-error" "^5.0.2"
 
-"@aureooms/js-error@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-error/-/js-error-4.0.1.tgz#be2740b3f31a337e0828930c9b70d38113b4dd77"
-  integrity sha512-zsgs6wmnRsKljlusewYiBaFBM/hIJp43b7OwE9ybpLEL4wfXjGP17cJTTAY8gpzALVFwEA5/flxIK0I6gJJLHQ==
-
 "@aureooms/js-error@^5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@aureooms/js-error/-/js-error-5.0.2.tgz#dc2ad2fc2b10365581c32c28222daccc5c3c9600"
   integrity sha512-HLO95kmZ1nJV5qo8Xq7czHVskFGPkM3l60JFgdTnpvCH6P6lkyWDBplaDB9gI5cPvcRIZDs1HeAHhAlHR/jBxw==
 
-"@aureooms/js-integer-big-endian@10.1.0", "@aureooms/js-integer-big-endian@^10.1.0":
+"@aureooms/js-integer-big-endian@10.1.0":
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/@aureooms/js-integer-big-endian/-/js-integer-big-endian-10.1.0.tgz#47320d60d2332d8559e3be1b7e26e2b38b777a1e"
   integrity sha512-Bph2xwAYqOxNYwvDxEBAcWeHKhcvlg+QES3dTrOLQAumXoQI/r/Wpz0orueeFadyYNCeSm4i3gRkcjRdbh5NZw==
 
-"@aureooms/js-integer@9.0.2":
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-integer/-/js-integer-9.0.2.tgz#3abc02d5e9839618c7cd66514943e9a94101d1f3"
-  integrity sha512-OclKHlHPpp+y+CAokR6MlARCEnkB0CnNmeNxtYZsPHWtRAbgWza6RMk8lQk6WE9usJl48MqVQmDvFyloRaSR1Q==
+"@aureooms/js-integer-big-endian@^11.0.1":
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/@aureooms/js-integer-big-endian/-/js-integer-big-endian-11.0.1.tgz#fcc74d976a1f3ddedc259040f621b5b535f99eea"
+  integrity sha512-tV8cZXSGZkbISgJpt/+lv7fjf2rqZOoqlWSn0uYV5as9tdrlRGT9NIZNZtsSSEGq8Uu1zbPEoNFpBqxX4kuYCQ==
+
+"@aureooms/js-integer@10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@aureooms/js-integer/-/js-integer-10.0.1.tgz#3b9ab907f187a35cec11470fd7a761fe2b7cdf06"
+  integrity sha512-2dTaEMkcz90hyielR93Eaynt7t3KJsgQoU1w8tFMw8sAc/A369/AIo3Op2999sSY/4nRkIdVApEAhecMSEthfw==
   dependencies:
-    "@aureooms/js-error" "^4.0.1"
-    "@aureooms/js-integer-big-endian" "^10.1.0"
+    "@aureooms/js-error" "^5.0.2"
+    "@aureooms/js-integer-big-endian" "^11.0.1"
 
 "@aureooms/js-itertools@^5.0.0":
   version "5.0.1"
