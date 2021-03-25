@@ -11,9 +11,11 @@ export function _stringify_digits ( { str } ) {
 		repr += toStr(integral) ;
 
 		if (transient.length || repetend.length) repr += '.' ;
+		// eslint-disable-next-line unicorn/no-array-callback-reference
 		repr += transient.map(toStr).join('') ;
 
 		if (repetend.length) repr += '|' ;
+		// eslint-disable-next-line unicorn/no-array-callback-reference
 		repr += repetend.map(toStr).join('') ;
 
 		return repr ;
