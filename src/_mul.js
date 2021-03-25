@@ -2,11 +2,11 @@
  * Dummy mul template.
  */
 
-export default function _mul({mul}) {
-	return function (a0, a1, b0, b1) {
-		const d = mul(a1, b1);
-		const n = mul(a0, b0);
+const _mul = ({mul}) => (a0, a1, b0, b1) => {
+	const n = mul(a0, b0);
+	const d = mul(a1, b1);
 
-		return [n, d];
-	};
-}
+	return [n, d];
+};
+
+export default _mul;

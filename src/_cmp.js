@@ -1,5 +1,5 @@
-export default function _cmp({jz, lt0, cmp, neg, divmod}) {
-	const compare_positive_fractions = function (a, b, c, d) {
+const _cmp = ({jz, lt0, cmp, neg, divmod}) => {
+	const compare_positive_fractions = (a, b, c, d) => {
 		if (jz(b)) {
 			if (jz(d)) return 0;
 			return 1;
@@ -11,7 +11,7 @@ export default function _cmp({jz, lt0, cmp, neg, divmod}) {
 		return cmp(q1, q2) || compare_positive_fractions(d, r2, b, r1);
 	};
 
-	return function (a, b, c, d) {
+	return (a, b, c, d) => {
 		if (lt0(b)) {
 			b = neg(b);
 			a = neg(a);
@@ -30,4 +30,6 @@ export default function _cmp({jz, lt0, cmp, neg, divmod}) {
 		if (lt0(c)) return 1;
 		return compare_positive_fractions(a, b, c, d);
 	};
-}
+};
+
+export default _cmp;

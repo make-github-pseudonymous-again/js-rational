@@ -1,21 +1,24 @@
-export default function _stringify_digits({str}) {
-	return function (base, {sign, integral, transient, repetend}) {
-		const toStr = (x) => str(x, base);
+const _stringify_digits = ({str}) => (
+	base,
+	{sign, integral, transient, repetend},
+) => {
+	const toStr = (x) => str(x, base);
 
-		let repr = '';
+	let repr = '';
 
-		if (sign < 0) repr += '-';
+	if (sign < 0) repr += '-';
 
-		repr += toStr(integral);
+	repr += toStr(integral);
 
-		if (transient.length > 0 || repetend.length > 0) repr += '.';
-		// eslint-disable-next-line unicorn/no-array-callback-reference
-		repr += transient.map(toStr).join('');
+	if (transient.length > 0 || repetend.length > 0) repr += '.';
+	// eslint-disable-next-line unicorn/no-array-callback-reference
+	repr += transient.map(toStr).join('');
 
-		if (repetend.length > 0) repr += '|';
-		// eslint-disable-next-line unicorn/no-array-callback-reference
-		repr += repetend.map(toStr).join('');
+	if (repetend.length > 0) repr += '|';
+	// eslint-disable-next-line unicorn/no-array-callback-reference
+	repr += repetend.map(toStr).join('');
 
-		return repr;
-	};
-}
+	return repr;
+};
+
+export default _stringify_digits;
