@@ -2,7 +2,7 @@
  * Dummy sub template.
  */
 
-export function _sub({mul, sub}) {
+export default function _sub({mul, sub}) {
 	return function (a0, a1, b0, b1) {
 		const d = mul(a1, b1);
 		const x = mul(a0, b1);

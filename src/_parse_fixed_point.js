@@ -1,6 +1,7 @@
-import {DECIMAL_PREFIX, REPETEND_PREFIX} from './_constants.js';
+import DECIMAL_PREFIX from './constants/DECIMAL_PREFIX.js';
+import REPETEND_PREFIX from './constants/REPETEND_PREFIX.js';
 
-export function _parse_fixed_point({_chr, reg, sub}) {
+export default function _parse_fixed_point({_chr, reg, sub}) {
 	return function (base, s) {
 		const [integral, decimal] = s.split(DECIMAL_PREFIX);
 		const [transient, repetend] = decimal.split(REPETEND_PREFIX);

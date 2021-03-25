@@ -1,6 +1,6 @@
-import {FRACTION_SEP} from './_constants.js';
+import FRACTION_SEP from './constants/FRACTION_SEP.js';
 
-export function _parse_fraction({reg}) {
+export default function _parse_fraction({reg}) {
 	return function (base, s) {
 		const [_numerator, _denominator] = s.split(FRACTION_SEP);
 

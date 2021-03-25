@@ -2,7 +2,7 @@
  * Dummy add template.
  */
 
-export function _add({mul, add}) {
+export default function _add({mul, add}) {
 	return function (a0, a1, b0, b1) {
 		const d = mul(a1, b1);
 		const x = mul(a0, b1);

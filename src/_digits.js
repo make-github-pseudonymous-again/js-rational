@@ -1,8 +1,18 @@
 import {_take} from '@aureooms/js-itertools';
-import {_decimals} from './decimals.js';
-import {_transient} from './transient.js';
+import _decimals from './_decimals.js';
+import _transient from './_transient.js';
 
-export function _digits({jz, gt1, eq, muln, divmodn, divmod, egcd, sgn, abs}) {
+export default function _digits({
+	jz,
+	gt1,
+	eq,
+	muln,
+	divmodn,
+	divmod,
+	egcd,
+	sgn,
+	abs,
+}) {
 	const tr = _transient({jz, gt1, divmodn});
 	const dec = _decimals({eq, muln, divmod});
 

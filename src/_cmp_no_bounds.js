@@ -1,4 +1,4 @@
-export function _cmp_no_bounds({jz, lt0, mul, cmp}) {
+export default function _cmp_no_bounds({jz, lt0, mul, cmp}) {
 	return function (a, b, c, d) {
 		if (jz(b)) {
 			if (lt0(a)) {

@@ -1,4 +1,4 @@
-export function _cmp({jz, lt0, cmp, neg, divmod}) {
+export default function _cmp({jz, lt0, cmp, neg, divmod}) {
 	const compare_positive_fractions = function (a, b, c, d) {
 		if (jz(b)) {
 			if (jz(d)) return 0;

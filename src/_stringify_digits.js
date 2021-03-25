@@ -1,4 +1,4 @@
-export function _stringify_digits({str}) {
+export default function _stringify_digits({str}) {
 	return function (base, {sign, integral, transient, repetend}) {
 		const toStr = (x) => str(x, base);
 
