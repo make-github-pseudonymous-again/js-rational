@@ -158,7 +158,8 @@
           ]
         ],
         "sourceMaps": "inline"
-      }
+      },
+      "debug": {}
     }
   }
 }
