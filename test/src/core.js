@@ -6,7 +6,7 @@ import {
 	_cmp , _cmp_no_bounds ,
 	_simplify , _digits , _stringify_digits ,
 	_parse_fraction , _parse_fixed_point
-} from '../../src';
+} from "../../src/index.js";
 
 const GOOGOL = '10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000' ;
 
@@ -14,7 +14,7 @@ const factorize = __factorize__( $2, iadd1, eq0, gt1, divmod ) ;
 
 const ufactors = n => new Set(factorize(n)) ;
 
-import { ALU } from './_fixtures' ;
+import { ALU } from "./_fixtures.js" ;
 
 function binary ( t , alu , [ [ _x , _y , factory ] , a , b , c , d , e ] ) {
 

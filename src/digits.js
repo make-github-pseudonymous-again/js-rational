@@ -1,6 +1,6 @@
 import { take } from '@aureooms/js-itertools' ;
-import { _decimals } from './decimals' ;
-import { _transient } from './transient' ;
+import { _decimals } from "./decimals.js" ;
+import { _transient } from "./transient.js" ;
 
 export function _digits ( { jz , gt1 , eq , muln , divmodn , divmod , egcd , sgn , abs } ) {
 

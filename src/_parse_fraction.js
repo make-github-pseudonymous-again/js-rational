@@ -1,5 +1,5 @@
 
-import { FRACTION_SEP } from './_constants' ;
+import { FRACTION_SEP } from "./_constants.js" ;
 
 export function _parse_fraction ( { reg } ) {
 

@@ -1,5 +1,5 @@
 import int from 'int' ;
-import BN from 'bn.js' ;
+import BN from "bn.js/lib/bn.js" ;
 import { ZZ } from '@aureooms/js-integer' ;
 import { _chr } from '@aureooms/js-integer-big-endian' ;
 

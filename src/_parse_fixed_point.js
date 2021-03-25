@@ -1,5 +1,5 @@
 
-import { DECIMAL_PREFIX , REPETEND_PREFIX } from './_constants' ;
+import { DECIMAL_PREFIX , REPETEND_PREFIX } from "./_constants.js" ;
 
 export function _parse_fixed_point ( { _chr , reg , sub } ) {
 
