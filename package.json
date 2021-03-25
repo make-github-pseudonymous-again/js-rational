@@ -26,12 +26,24 @@
     "rational"
   ],
   "sideEffects": false,
-  "main": "lib/index.js",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "umd:main": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
+  "exports": {
+    ".": {
+      "browser": "./dist/index.module.js",
+      "umd": "./dist/index.umd.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.modern.js"
+    }
+  },
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
-    "build": "babel --delete-dir-on-start --env-name production src -d lib",
+    "build": "NODE_ENV=production microbundle",
     "build-docs": "esdoc",
     "build-gh-pages": "npm run build-docs",
     "commit-msg": "commitlint --edit",
@@ -57,7 +69,6 @@
     "@aureooms/js-integer-big-endian": "11.0.1",
     "@aureooms/js-number": "3.1.0",
     "@aureooms/js-prime": "4.0.0",
-    "@babel/cli": "7.13.10",
     "@babel/core": "7.13.10",
     "@babel/preset-env": "7.13.12",
     "@babel/register": "7.13.8",
@@ -77,6 +88,7 @@
     "fixpack": "4.0.0",
     "husky": "5.2.0",
     "int": "0.2.0",
+    "microbundle": "0.13.0",
     "np": "7.4.0",
     "pinst": "2.1.6",
     "power-assert": "1.6.1",
