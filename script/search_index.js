@@ -1,62 +1,62 @@
 window.esdocSearchIndex = [
   [
-    "@aureooms/js-rational/src/_constants.js~decimal_prefix",
+    "@aureooms/js-rational/src/constants/decimal_prefix.js~decimal_prefix",
     "variable/index.html#static-variable-DECIMAL_PREFIX",
-    "<span>DECIMAL_PREFIX</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_constants.js</span>",
+    "<span>DECIMAL_PREFIX</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/constants/DECIMAL_PREFIX.js</span>",
     "variable"
   ],
   [
-    "@aureooms/js-rational/src/_constants.js~fraction_sep",
+    "@aureooms/js-rational/src/constants/fraction_sep.js~fraction_sep",
     "variable/index.html#static-variable-FRACTION_SEP",
-    "<span>FRACTION_SEP</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_constants.js</span>",
+    "<span>FRACTION_SEP</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/constants/FRACTION_SEP.js</span>",
     "variable"
   ],
   [
-    "@aureooms/js-rational/src/_constants.js~repetend_prefix",
+    "@aureooms/js-rational/src/constants/repetend_prefix.js~repetend_prefix",
     "variable/index.html#static-variable-REPETEND_PREFIX",
-    "<span>REPETEND_PREFIX</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_constants.js</span>",
+    "<span>REPETEND_PREFIX</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/constants/REPETEND_PREFIX.js</span>",
     "variable"
   ],
   [
-    "@aureooms/js-rational/src/add.js~_add",
+    "@aureooms/js-rational/src/_add.js~_add",
     "function/index.html#static-function-_add",
-    "<span>_add</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/add.js</span>",
+    "<span>_add</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_add.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-rational/src/cmp.js~_cmp",
+    "@aureooms/js-rational/src/_cmp.js~_cmp",
     "function/index.html#static-function-_cmp",
-    "<span>_cmp</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/cmp.js</span>",
+    "<span>_cmp</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_cmp.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-rational/src/cmp_no_bounds.js~_cmp_no_bounds",
+    "@aureooms/js-rational/src/_cmp_no_bounds.js~_cmp_no_bounds",
     "function/index.html#static-function-_cmp_no_bounds",
-    "<span>_cmp_no_bounds</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/cmp_no_bounds.js</span>",
+    "<span>_cmp_no_bounds</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_cmp_no_bounds.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-rational/src/decimals.js~_decimals",
+    "@aureooms/js-rational/src/_decimals.js~_decimals",
     "function/index.html#static-function-_decimals",
-    "<span>_decimals</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/decimals.js</span>",
+    "<span>_decimals</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_decimals.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-rational/src/digits.js~_digits",
+    "@aureooms/js-rational/src/_digits.js~_digits",
     "function/index.html#static-function-_digits",
-    "<span>_digits</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/digits.js</span>",
+    "<span>_digits</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_digits.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-rational/src/div.js~_div",
+    "@aureooms/js-rational/src/_div.js~_div",
     "function/index.html#static-function-_div",
-    "<span>_div</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/div.js</span>",
+    "<span>_div</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_div.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-rational/src/mul.js~_mul",
+    "@aureooms/js-rational/src/_mul.js~_mul",
     "function/index.html#static-function-_mul",
-    "<span>_mul</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/mul.js</span>",
+    "<span>_mul</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_mul.js</span>",
     "function"
   ],
   [
@@ -72,15 +72,15 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
-    "@aureooms/js-rational/src/pow.js~_pow",
+    "@aureooms/js-rational/src/_pow.js~_pow",
     "function/index.html#static-function-_pow",
-    "<span>_pow</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/pow.js</span>",
+    "<span>_pow</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_pow.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-rational/src/simplify.js~_simplify",
+    "@aureooms/js-rational/src/_simplify.js~_simplify",
     "function/index.html#static-function-_simplify",
-    "<span>_simplify</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/simplify.js</span>",
+    "<span>_simplify</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_simplify.js</span>",
     "function"
   ],
   [
@@ -90,15 +90,15 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
-    "@aureooms/js-rational/src/sub.js~_sub",
+    "@aureooms/js-rational/src/_sub.js~_sub",
     "function/index.html#static-function-_sub",
-    "<span>_sub</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/sub.js</span>",
+    "<span>_sub</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_sub.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-rational/src/transient.js~_transient",
+    "@aureooms/js-rational/src/_transient.js~_transient",
     "function/index.html#static-function-_transient",
-    "<span>_transient</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/transient.js</span>",
+    "<span>_transient</span> <span class=\"search-result-import-path\">@aureooms/js-rational/src/_transient.js</span>",
     "function"
   ],
   [
@@ -384,9 +384,45 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
-    "src/_constants.js",
-    "file/src/_constants.js.html",
-    "src/_constants.js",
+    "src/_add.js",
+    "file/src/_add.js.html",
+    "src/_add.js",
+    "file"
+  ],
+  [
+    "src/_cmp.js",
+    "file/src/_cmp.js.html",
+    "src/_cmp.js",
+    "file"
+  ],
+  [
+    "src/_cmp_no_bounds.js",
+    "file/src/_cmp_no_bounds.js.html",
+    "src/_cmp_no_bounds.js",
+    "file"
+  ],
+  [
+    "src/_decimals.js",
+    "file/src/_decimals.js.html",
+    "src/_decimals.js",
+    "file"
+  ],
+  [
+    "src/_digits.js",
+    "file/src/_digits.js.html",
+    "src/_digits.js",
+    "file"
+  ],
+  [
+    "src/_div.js",
+    "file/src/_div.js.html",
+    "src/_div.js",
+    "file"
+  ],
+  [
+    "src/_mul.js",
+    "file/src/_mul.js.html",
+    "src/_mul.js",
     "file"
   ],
   [
@@ -402,81 +438,57 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/_pow.js",
+    "file/src/_pow.js.html",
+    "src/_pow.js",
+    "file"
+  ],
+  [
+    "src/_simplify.js",
+    "file/src/_simplify.js.html",
+    "src/_simplify.js",
+    "file"
+  ],
+  [
     "src/_stringify_digits.js",
     "file/src/_stringify_digits.js.html",
     "src/_stringify_digits.js",
     "file"
   ],
   [
-    "src/add.js",
-    "file/src/add.js.html",
-    "src/add.js",
+    "src/_sub.js",
+    "file/src/_sub.js.html",
+    "src/_sub.js",
     "file"
   ],
   [
-    "src/cmp.js",
-    "file/src/cmp.js.html",
-    "src/cmp.js",
+    "src/_transient.js",
+    "file/src/_transient.js.html",
+    "src/_transient.js",
     "file"
   ],
   [
-    "src/cmp_no_bounds.js",
-    "file/src/cmp_no_bounds.js.html",
-    "src/cmp_no_bounds.js",
+    "src/constants/decimal_prefix.js",
+    "file/src/constants/DECIMAL_PREFIX.js.html",
+    "src/constants/DECIMAL_PREFIX.js",
     "file"
   ],
   [
-    "src/decimals.js",
-    "file/src/decimals.js.html",
-    "src/decimals.js",
+    "src/constants/fraction_sep.js",
+    "file/src/constants/FRACTION_SEP.js.html",
+    "src/constants/FRACTION_SEP.js",
     "file"
   ],
   [
-    "src/digits.js",
-    "file/src/digits.js.html",
-    "src/digits.js",
-    "file"
-  ],
-  [
-    "src/div.js",
-    "file/src/div.js.html",
-    "src/div.js",
+    "src/constants/repetend_prefix.js",
+    "file/src/constants/REPETEND_PREFIX.js.html",
+    "src/constants/REPETEND_PREFIX.js",
     "file"
   ],
   [
     "src/index.js",
     "file/src/index.js.html",
     "src/index.js",
-    "file"
-  ],
-  [
-    "src/mul.js",
-    "file/src/mul.js.html",
-    "src/mul.js",
-    "file"
-  ],
-  [
-    "src/pow.js",
-    "file/src/pow.js.html",
-    "src/pow.js",
-    "file"
-  ],
-  [
-    "src/simplify.js",
-    "file/src/simplify.js.html",
-    "src/simplify.js",
-    "file"
-  ],
-  [
-    "src/sub.js",
-    "file/src/sub.js.html",
-    "src/sub.js",
-    "file"
-  ],
-  [
-    "src/transient.js",
-    "file/src/transient.js.html",
-    "src/transient.js",
     "file"
   ]
 ]

@@ -3,14 +3,48 @@
   "expectCount": 17,
   "actualCount": 4,
   "files": {
-    "src/_constants.js": {
-      "expectCount": 3,
+    "src/_add.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/_cmp.js": {
+      "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
-        2,
-        3,
-        4
+        1
       ]
+    },
+    "src/_cmp_no_bounds.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/_decimals.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "src/_digits.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "src/_div.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/_mul.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
     },
     "src/_parse_fixed_point.js": {
       "expectCount": 1,
@@ -23,7 +57,21 @@
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
-        4
+        3
+      ]
+    },
+    "src/_pow.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/_simplify.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
       ]
     },
     "src/_stringify_digits.js": {
@@ -33,73 +81,37 @@
         1
       ]
     },
-    "src/add.js": {
+    "src/_sub.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
     },
-    "src/cmp.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        1
-      ]
-    },
-    "src/cmp_no_bounds.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        1
-      ]
-    },
-    "src/decimals.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        5
-      ]
-    },
-    "src/digits.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        5
-      ]
-    },
-    "src/div.js": {
-      "expectCount": 1,
-      "actualCount": 1,
-      "undocumentLines": []
-    },
-    "src/mul.js": {
-      "expectCount": 1,
-      "actualCount": 1,
-      "undocumentLines": []
-    },
-    "src/pow.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        1
-      ]
-    },
-    "src/simplify.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        1
-      ]
-    },
-    "src/sub.js": {
-      "expectCount": 1,
-      "actualCount": 1,
-      "undocumentLines": []
-    },
-    "src/transient.js": {
+    "src/_transient.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         3
+      ]
+    },
+    "src/constants/DECIMAL_PREFIX.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/constants/FRACTION_SEP.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/constants/REPETEND_PREFIX.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
       ]
     }
   }
