@@ -65,7 +65,7 @@
     "travis": "npm run lint-config && npm run lint && npm run cover"
   },
   "dependencies": {
-    "@aureooms/js-itertools": "^5.0.2"
+    "@aureooms/js-itertools": "^5.1.0"
   },
   "devDependencies": {
     "@aureooms/js-integer": "10.0.1",

@@ -1,4 +1,4 @@
-import {take} from '@aureooms/js-itertools';
+import {_take} from '@aureooms/js-itertools';
 import {_decimals} from './decimals.js';
 import {_transient} from './transient.js';
 
@@ -15,7 +15,7 @@ export function _digits({jz, gt1, eq, muln, divmodn, divmod, egcd, sgn, abs}) {
 
 		const decimals = dec(b, v, transient_length, has_repetend, u);
 
-		const transient = [...take(decimals, transient_length)];
+		const transient = [..._take(decimals, transient_length)];
 
 		const repetend = [...decimals];
 
