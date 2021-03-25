@@ -15,9 +15,9 @@ const _digits = ({jz, gt1, eq, muln, divmodn, divmod, egcd, sgn, abs}) => {
 
 		const decimals = dec(b, v, transient_length, has_repetend, u);
 
-		const transient = [..._take(decimals, transient_length)];
+		const transient = Array.from(_take(decimals, transient_length));
 
-		const repetend = [...decimals];
+		const repetend = Array.from(decimals);
 
 		return {sign: sgn(x), integral, transient, repetend};
 	};
