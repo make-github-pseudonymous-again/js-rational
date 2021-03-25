@@ -29,7 +29,7 @@ a / b === 3 / 10 ; // true
 
 [![License](https://img.shields.io/github/license/aureooms/js-rational.svg)](https://raw.githubusercontent.com/aureooms/js-rational/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@aureooms/js-rational.svg)](https://www.npmjs.org/package/@aureooms/js-rational)
-[![Build](https://img.shields.io/travis/aureooms/js-rational/main.svg)](https://travis-ci.org/aureooms/js-rational/branches)
+[![Build](https://img.shields.io/travis/aureooms/js-rational/main.svg)](https://travis-ci.com/aureooms/js-rational/branches)
 [![Dependencies](https://img.shields.io/david/aureooms/js-rational.svg)](https://david-dm.org/aureooms/js-rational)
 [![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-rational.svg)](https://david-dm.org/aureooms/js-rational?type=dev)
 [![GitHub issues](https://img.shields.io/github/issues/aureooms/js-rational.svg)](https://github.com/aureooms/js-rational/issues)
