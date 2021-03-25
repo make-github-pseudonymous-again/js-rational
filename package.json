@@ -77,16 +77,16 @@
     "url": "https://github.com/aureooms/js-rational/issues"
   },
   "dependencies": {
-    "@aureooms/js-itertools": "^5.0.0"
+    "@aureooms/js-itertools": "^5.0.2"
   },
   "devDependencies": {
-    "@aureooms/js-integer": "9.0.2",
-    "@aureooms/js-integer-big-endian": "10.1.0",
+    "@aureooms/js-integer": "10.0.1",
+    "@aureooms/js-integer-big-endian": "11.0.1",
     "@aureooms/js-number": "3.1.0",
     "@aureooms/js-prime": "4.0.0",
     "@babel/cli": "7.13.10",
     "@babel/core": "7.13.10",
-    "@babel/preset-env": "7.13.10",
+    "@babel/preset-env": "7.13.12",
     "@babel/register": "7.13.8",
     "ava": "3.15.0",
     "babel-plugin-transform-remove-console": "6.9.4",
