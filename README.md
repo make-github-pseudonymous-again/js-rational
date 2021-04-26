@@ -1,4 +1,4 @@
-:pizza: [@aureooms/js-rational](https://aureooms.github.io/js-rational)
+:pizza: [@aureooms/js-rational](https://make-github-pseudonymous-again.github.io/js-rational)
 ==
 
 <p align="center">
@@ -15,11 +15,11 @@ User:Acdx
 
 Fractions for JavaScript.
 See
-[@aureooms/js-rational-field](https://aureooms.github.io/js-rational-field)
+[@aureooms/js-rational-field](https://make-github-pseudonymous-again.github.io/js-rational-field)
 for an implementation of the rational field ℚ base on this library
 and
-[@aureooms/js-integer](https://aureooms.github.io/js-integer).
-See [docs](https://aureooms.github.io/js-rational).
+[@aureooms/js-integer](https://make-github-pseudonymous-again.github.io/js-integer).
+See [docs](https://make-github-pseudonymous-again.github.io/js-rational).
 Parent is [@aureooms/js-algorithms](https://github.com/aureooms/js-algorithms).
 
 ```js
@@ -39,5 +39,5 @@ a / b === 3 / 10 ; // true
 [![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-rational.svg)](https://codeclimate.com/github/aureooms/js-rational/trends/churn)
 [![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-rational/main.svg)](https://codecov.io/gh/aureooms/js-rational)
 [![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-rational.svg)](https://codeclimate.com/github/aureooms/js-rational/trends/technical_debt)
-[![Documentation](https://aureooms.github.io/js-rational/badge.svg)](https://aureooms.github.io/js-rational/source.html)
+[![Documentation](https://make-github-pseudonymous-again.github.io/js-rational/badge.svg)](https://make-github-pseudonymous-again.github.io/js-rational/source.html)
 [![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-rational)](https://bundlephobia.com/result?p=@aureooms/js-rational)
