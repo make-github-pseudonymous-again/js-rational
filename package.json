@@ -4,13 +4,13 @@
   "version": "4.0.1",
   "license": "AGPL-3.0",
   "author": "Aurélien Ooms <aurelien.ooms@gmail.com>",
-  "homepage": "https://github.com/aureooms/js-rational",
+  "homepage": "https://github.com/make-github-pseudonymous-again/js-rational",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aureooms/js-rational"
+    "url": "https://github.com/make-github-pseudonymous-again/js-rational"
   },
   "bugs": {
-    "url": "https://github.com/aureooms/js-rational/issues"
+    "url": "https://github.com/make-github-pseudonymous-again/js-rational/issues"
   },
   "keywords": [
     "algorithm",
